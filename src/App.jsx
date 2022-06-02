@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { AboutPage, HomePage, SharedLayout } from "./pages/index";
+import "./index.css";
 
 function App() {
   return (
