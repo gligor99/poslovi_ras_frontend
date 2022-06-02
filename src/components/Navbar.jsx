@@ -29,7 +29,7 @@ const pages = [
   },
   {
     page: "Kontakt",
-    path: "/kontakt",
+    path: "/contact",
   },
 ];
 const settings = ["Profil", "Odjavi se"];
@@ -135,6 +135,9 @@ const ResponsiveAppBar = () => {
           {/* Button za dodavanje novog oglasa */}
 
           <Box sx={{ flexGrow: 0 }}>
+            <Button variant="outlined" color="error" sx={{ marginRight: 2 }}>
+              Dodaj posao
+            </Button>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar />
