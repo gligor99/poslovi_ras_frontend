@@ -1,4 +1,7 @@
 import * as React from "react";
+import { NavLink } from "react-router-dom";
+
+// MUI Components
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -11,11 +14,24 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 
 import logo from "../assets/img/logo-wbg (1).png";
 
-const pages = ["Početna", "Poslovi", "O nama", "Kontakt"];
+const pages = [
+  { page: "Početna", path: "/" },
+  {
+    page: "Poslovi",
+    path: "/jobs",
+  },
+  {
+    page: "O nama",
+    path: "/about",
+  },
+  {
+    page: "Kontakt",
+    path: "/kontakt",
+  },
+];
 const settings = ["Profil", "Odjavi se"];
 
 const ResponsiveAppBar = () => {
@@ -83,9 +99,9 @@ const ResponsiveAppBar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map((item) => (
+                <MenuItem key={item.page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{item.page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -100,13 +116,18 @@ const ResponsiveAppBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            {pages.map((item) => (
               <Button
-                key={page}
+                key={item.page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "#000", display: "block" }}
               >
-                {page}
+                <NavLink
+                  to={item.path}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  {item.page}
+                </NavLink>
               </Button>
             ))}
           </Box>
