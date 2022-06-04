@@ -80,7 +80,7 @@ const ContactPage = () => {
           variant="contained"
           color="error"
           sx={{
-            width: "97%",
+            width: "96%",
             margin: "5px 0px 0px 10px",
             "&:hover": {
               filter: "brightness(90%)",
