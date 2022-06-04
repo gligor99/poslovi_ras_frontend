@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { AboutPage, HomePage, SharedLayout } from "./pages/index";
+import { AboutPage, ContactPage, HomePage, SharedLayout } from "./pages/index";
 import "./index.css";
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
+        <Route path="contact" element={<ContactPage />} />
       </Route>
     </Routes>
   );
