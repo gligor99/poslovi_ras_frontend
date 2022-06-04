@@ -132,15 +132,16 @@ const ContactPage = () => {
           <Typography
             gutterBottom
             component="div"
-            sx={{ textAlign: "center", marginBottom: 2 }}
+            sx={{ paddingLeft: "15px", marginBottom: 2 }}
           >
             Kontakt telefon: 066 321 232, 065 991 880
           </Typography>
-          <Typography component="div" sx={{ textAlign: "center" }}>
-            Linkovi:
-          </Typography>
 
           <CardActions>
+            <Typography component="div" sx={{ paddingLeft: "9px" }}>
+              Linkovi:
+            </Typography>
+
             <Button color="error" size="small">
               Facebook
             </Button>
