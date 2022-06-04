@@ -1,8 +1,18 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useState } from "react";
 
 const AboutPage = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
   return (
     <Container
       maxWidth="xl"
@@ -14,40 +24,120 @@ const AboutPage = () => {
         height: 700,
       }}
     >
-      <Typography textAlign="center" variant="h4">
+      <Typography textAlign="center" variant="h4" sx={{ mt: 10, pb: "20px" }}>
         O nama
       </Typography>
       <Box
         sx={{
-          width: "80%",
-          height: 200,
-          backgroundColor: "text.disabled",
-          marginTop: "10px",
+          width: "60%",
         }}
       >
-        <Typography textAlign="center" sx={{ p: 2 }}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum,
-          obcaecati nesciunt incidunt repellendus aut quos, dolores officia
-          ipsam est odit quidem, culpa sed? Fuga esse, doloremque et optio
-          beatae vero! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Illum, obcaecati nesciunt incidunt repellendus aut quos, dolores
-          officia ipsam est odit quidem, culpa sed? Fuga esse, doloremque et
-          optio beatae vero!
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          width: "80%",
-          height: 100,
-          backgroundColor: "text.disabled",
-          marginTop: "10px",
-        }}
-      >
-        <Typography textAlign="center" sx={{ p: 2 }}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
-          accusantium exercitationem perferendis impedit commodi officiis, alias
-          mollitia totam vitae aperiam.
-        </Typography>
+        <Accordion
+          sx={{ backgroundColor: "#d14541", marginBottom: "3px" }}
+          expanded={expanded === "panel1"}
+          onChange={handleChange("panel1")}
+        >
+          <AccordionSummary
+            sx={{ color: "white" }}
+            expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+            aria-controls="panel4bh-content"
+            id="panel4bh-header"
+          >
+            <Typography
+              sx={{ width: "33%", flexShrink: 0, paddingLeft: "10px" }}
+            >
+              Prvi dio
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails sx={{ borderTop: "1px solid black" }}>
+            <Typography sx={{ color: "white", padding: "10px" }}>
+              Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
+              sit amet egestas eros, vitae egestas augue. Duis vel est augue.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          sx={{ backgroundColor: "#d14541", marginBottom: "3px" }}
+          expanded={expanded === "panel2"}
+          onChange={handleChange("panel2")}
+        >
+          <AccordionSummary
+            sx={{ color: "white" }}
+            expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+            aria-controls="panel4bh-content"
+            id="panel4bh-header"
+          >
+            <Typography
+              sx={{ width: "33%", flexShrink: 0, paddingLeft: "10px" }}
+            >
+              Drugi dio
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails sx={{ borderTop: "1px solid black" }}>
+            <Typography sx={{ color: "white", padding: "10px" }}>
+              Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
+              sit amet egestas eros, vitae egestas augue. Duis vel est augue.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          sx={{ backgroundColor: "#d14541", marginBottom: "3px" }}
+          expanded={expanded === "panel3"}
+          onChange={handleChange("panel3")}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+            aria-controls="panel4bh-content"
+            id="panel4bh-header"
+          >
+            <Typography
+              sx={{
+                width: "33%",
+                flexShrink: 0,
+                color: "white",
+                paddingLeft: "10px",
+              }}
+            >
+              Treci dio
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails sx={{ borderTop: "1px solid black" }}>
+            <Typography sx={{ color: "white", padding: "10px" }}>
+              Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
+              sit amet egestas eros, vitae egestas augue. Duis vel est augue.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          sx={{ backgroundColor: "#d14541", marginBottom: "3px" }}
+          expanded={expanded === "panel4"}
+          onChange={handleChange("panel4")}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+            aria-controls="panel4bh-content"
+            id="panel4bh-header"
+          >
+            <Typography
+              sx={{
+                width: "33%",
+                flexShrink: 0,
+                color: "white",
+                paddingLeft: "10px",
+              }}
+            >
+              Cetvrti dio
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails sx={{ borderTop: "1px solid black" }}>
+            <Typography sx={{ color: "white", padding: "10px" }}>
+              Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
+              sit amet egestas eros, vitae egestas augue. Duis vel est augue.
+              Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
+              sit amet egestas eros, vitae egestas augue. Duis vel est augue.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
       </Box>
     </Container>
   );
