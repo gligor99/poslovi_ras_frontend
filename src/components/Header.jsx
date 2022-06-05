@@ -19,6 +19,7 @@ const Header = () => {
         width: 1,
         height: 400,
         bgcolor: "#f4f4f4",
+        boxShadow: 3,
       }}
     >
       <Typography variant="h4" sx={{ m: 2, fontWeight: 900 }}>

@@ -25,6 +25,7 @@ const SearchBar = () => {
         height: 100,
         borderRadius: 5,
         bgcolor: "#fff",
+        boxShadow: 3,
       }}
     >
       <Box
@@ -35,14 +36,18 @@ const SearchBar = () => {
         }}
       >
         <TextField
+          error
           sx={{ borderRadius: 25 }}
           id="outlined-basic"
           label="Outlined"
           variant="outlined"
         />
         <FormControl sx={{ minWidth: 80 }}>
-          <InputLabel id="demo-simple-select-autowidth-label">Age</InputLabel>
+          <InputLabel error id="demo-simple-select-autowidth-label">
+            Age
+          </InputLabel>
           <Select
+            error
             labelId="demo-simple-select-autowidth-label"
             id="demo-simple-select-autowidth"
             value={age}
