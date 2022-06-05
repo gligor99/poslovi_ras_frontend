@@ -1,7 +1,14 @@
 import React from "react";
 
+import { Header } from "../components/index";
+import SearchBar from "../components/SearchBar";
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <>
+      <Header />;
+    </>
+  );
 };
 
 export default HomePage;

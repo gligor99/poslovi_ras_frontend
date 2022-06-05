@@ -54,7 +54,10 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" style={{ background: "#fff", color: "#000" }}>
+    <AppBar
+      position="relative"
+      style={{ zIndex: 99, background: "#fff", color: "#000" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
