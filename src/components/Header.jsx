@@ -1,8 +1,11 @@
 import React from "react";
 
+// Components
+import { SearchBar } from "../components/index";
+
+// MUI Components
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
