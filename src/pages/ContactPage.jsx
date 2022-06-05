@@ -5,16 +5,11 @@ import TextField from "@mui/material/TextField";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import { useState } from "react";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const ContactPage = () => {
-  const [name, setName] = useState("");
-  const handleChange = (event) => {
-    setName(event.target.value);
-  };
-
   return (
     <Container
       maxWidth="xl"
@@ -35,6 +30,7 @@ const ContactPage = () => {
           alignItems: "center",
         }}
       >
+        {/* Lijeva strana stranice */}
         <Box
           component="form"
           sx={{
@@ -53,13 +49,7 @@ const ContactPage = () => {
           >
             Kontaktirajte nas
           </Typography>
-          <TextField
-            required
-            id="outlined-required"
-            label="Ime"
-            value={name}
-            onChange={handleChange}
-          />
+          <TextField required id="outlined-required" label="Ime" />
           <TextField
             required
             id="outlined-password-input"
@@ -102,14 +92,19 @@ const ContactPage = () => {
             Pošalji
           </Button>
         </Box>
+
+        {/* Desna strana stranice */}
         <Card
           sx={{
-            maxWidth: 500,
-            backgroundColor: "white",
-            border: "1px solid red",
+            maxWidth: "35vw",
+            backgroundColor: "#5c5c5c",
             height: 450,
             outline: "none",
             boxShadow: "none",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignContent: "center",
           }}
         >
           <CardContent>
@@ -117,38 +112,79 @@ const ContactPage = () => {
               gutterBottom
               variant="h5"
               component="div"
-              sx={{ textAlign: "center", marginBottom: 5 }}
+              sx={{
+                textAlign: "center",
+                marginBottom: 5,
+                color: "white",
+                textDecoration: "underline",
+              }}
             >
               Poslovi Bijeljina
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ color: "white" }}
+            >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Molestias, laudantium nihil quibusdam quisquam architecto voluptas
               excepturi! Et ab nulla, itaque minima iste nisi ipsa libero
               provident eius beatae id corporis ea fugit minus ex ullam nesciunt
               enim tempora atque laboriosam suscipit.
             </Typography>
-          </CardContent>
-          <Typography
-            gutterBottom
-            component="div"
-            sx={{ paddingLeft: "15px", marginBottom: 2 }}
-          >
-            Kontakt telefon: 066 321 232, 065 991 880
-          </Typography>
-
-          <CardActions>
-            <Typography component="div" sx={{ paddingLeft: "9px" }}>
-              Linkovi:
+            <Typography
+              gutterBottom
+              component="p"
+              sx={{
+                paddingTop: 5,
+                marginBottom: 2,
+                fontSize: "1rem",
+                color: "white",
+              }}
+            >
+              Kontakt telefon: 055 321 232, 065 991 880
             </Typography>
-
-            <Button color="error" size="small">
-              Facebook
+            <Typography
+              component="div"
+              sx={{
+                fontSize: "1rem",
+                color: "white",
+                paddingTop: 3,
+              }}
+            >
+              Pronađite nas:
+            </Typography>
+            <Button
+              size="small"
+              sx={{
+                color: "white",
+                backgroundColor: "#0011ff",
+                textTransform: "Capitalize",
+                marginRight: 1,
+                "&:hover": {
+                  background: "#0011ff",
+                  filter: "brightness(85%)",
+                },
+              }}
+            >
+              <FacebookIcon sx={{ color: "white" }} />: Poslovi Bijeljina
             </Button>
-            <Button color="error" size="small">
-              Instagram
+            <Button
+              onClick={() => navigate()}
+              size="small"
+              sx={{
+                color: "white",
+                backgroundColor: "#d14541",
+                textTransform: "lowercase",
+                "&:hover": {
+                  background: "#d14541",
+                  filter: "brightness(85%)",
+                },
+              }}
+            >
+              <InstagramIcon sx={{ color: "white" }} /> @poslovi_bijeljina
             </Button>
-          </CardActions>
+          </CardContent>
         </Card>
       </Container>
     </Container>
