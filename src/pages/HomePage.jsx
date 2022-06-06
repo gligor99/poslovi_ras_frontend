@@ -5,7 +5,7 @@ import { Header } from "../components/index";
 const HomePage = () => {
   return (
     <>
-      <Header />;
+      <Header />
     </>
   );
 };
