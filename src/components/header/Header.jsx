@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import { SearchBar } from "./SearchBar";
+import SearchBar from "./SearchBar";
 
 // MUI Components
 import Box from "@mui/material/Box";
