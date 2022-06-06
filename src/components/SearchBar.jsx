@@ -42,9 +42,9 @@ const SearchBar = () => {
           label="Outlined"
           variant="outlined"
         />
-        <FormControl sx={{ minWidth: 80 }}>
+        <FormControl sx={{ minWidth: 130 }}>
           <InputLabel error id="demo-simple-select-autowidth-label">
-            Age
+            Kategorija
           </InputLabel>
           <Select
             error
@@ -53,7 +53,7 @@ const SearchBar = () => {
             value={age}
             onChange={handleChange}
             autoWidth
-            label="Age"
+            label="Kategorija"
           >
             <MenuItem value="">
               <em>None</em>
