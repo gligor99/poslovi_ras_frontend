@@ -6,6 +6,9 @@ const HomePage = () => {
   return (
     <>
       <Header />
+      <div>
+        <h1> Hello, thsi is home page </h1>
+      </div>
     </>
   );
 };
