@@ -113,7 +113,7 @@ const ContactPage = () => {
             sx={{
               maxWidth: "35vw",
               backgroundColor: "#f4f4f4",
-              height: 450,
+              minHeight: 450,
               outline: "none",
               display: "flex",
               flexDirection: "column",
@@ -122,16 +122,7 @@ const ContactPage = () => {
               boxShadow: 3,
             }}
           >
-            <CardContent
-              sx={{
-                width: "80%",
-                height: "80%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                alignContent: "center",
-              }}
-            >
+            <CardContent>
               <Typography
                 gutterBottom
                 variant="h5"
@@ -139,6 +130,7 @@ const ContactPage = () => {
                 sx={{
                   textAlign: "center",
                   color: "black",
+                  pb: 3,
                 }}
               >
                 Poslovi Bijeljina
@@ -159,6 +151,8 @@ const ContactPage = () => {
                   display: "flex",
                   justifycontent: "center",
                   alignItems: "center",
+                  pt: 4,
+                  pb: 2,
                 }}
               >
                 <Typography

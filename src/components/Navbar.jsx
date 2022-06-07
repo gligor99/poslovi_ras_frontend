@@ -1,6 +1,3 @@
-import * as React from "react";
-import { NavLink } from "react-router-dom";
-
 // MUI Components
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -14,6 +11,10 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+//Router
+import { NavLink } from "react-router-dom";
+//Hooks
+import { useState } from "react";
 
 import logo from "../assets/img/logo-wbg (1).png";
 
@@ -35,8 +36,8 @@ const pages = [
 const settings = ["Profil", "Odjavi se"];
 
 const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -120,23 +121,30 @@ const ResponsiveAppBar = () => {
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((item) => (
-              <Button
+              <NavLink
+                to={item.path}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "20px",
+                  fontFamily: "Roboto",
+                  marginRight: 10,
+                  fontWeight: 500,
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  color: "black",
+                }}
                 key={item.page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "#000", display: "block" }}
               >
-                <NavLink
-                  to={item.path}
-                  style={{ textDecoration: "none", color: "inherit" }}
-                >
-                  {item.page}
-                </NavLink>
-              </Button>
+                {item.page}
+              </NavLink>
             ))}
           </Box>
 
           {/* Button za dodavanje novog oglasa */}
-
           <Box sx={{ flexGrow: 0 }}>
             <Button variant="outlined" color="error" sx={{ marginRight: 2 }}>
               Dodaj posao
