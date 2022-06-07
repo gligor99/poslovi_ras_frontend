@@ -1,3 +1,4 @@
+//MUI
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -7,7 +8,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 //Icons
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 //Components
-import Breadcrumb from "../components/Breadcrumb";
+import Breadcrumb from "../components/index";
 import { useState } from "react";
 
 const AboutPage = () => {

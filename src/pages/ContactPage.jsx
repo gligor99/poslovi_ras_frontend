@@ -1,4 +1,4 @@
-//MUI imports
+//MUI
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -12,10 +12,13 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 //Components
-import Breadcrumb from "./../components/Breadcrumb";
+import Breadcrumb from "./../components/index";
 const ContactPage = () => {
   return (
     <>
+      <Box sx={{ height: "50px", bgcolor: "red" }}>
+        <Breadcrumb />
+      </Box>
       <Container
         maxWidth="xl"
         sx={{
@@ -23,7 +26,7 @@ const ContactPage = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          height: 870,
+          height: 800,
         }}
       >
         <Breadcrumb />
