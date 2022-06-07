@@ -12,7 +12,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 //Components
-import Breadcrumb from "./../components/index";
+import { Breadcrumb } from "./../components/index";
 const ContactPage = () => {
   return (
     <>

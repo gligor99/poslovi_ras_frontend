@@ -8,7 +8,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 //Icons
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 //Components
-import Breadcrumb from "../components/index";
+import { Breadcrumb } from "../components/index";
 import { useState } from "react";
 
 const AboutPage = () => {
