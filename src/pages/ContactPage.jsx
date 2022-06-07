@@ -117,19 +117,27 @@ const ContactPage = () => {
               outline: "none",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "flex-start",
+              justifyContent: "center",
               alignContent: "center",
               boxShadow: 3,
             }}
           >
-            <CardContent>
+            <CardContent
+              sx={{
+                width: "80%",
+                height: "80%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                alignContent: "center",
+              }}
+            >
               <Typography
                 gutterBottom
                 variant="h5"
                 component="div"
                 sx={{
                   textAlign: "center",
-                  margin: "40px 10px",
                   color: "black",
                 }}
               >
@@ -157,13 +165,14 @@ const ContactPage = () => {
                   gutterBottom
                   component="p"
                   sx={{
-                    paddingTop: 5,
-                    marginBottom: 2,
                     fontSize: "1rem",
                     color: "black",
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
                   }}
                 >
-                  <PhoneAndroidIcon sx={{ width: 30 }} /> 055 321 232, 065 991
+                  <PhoneAndroidIcon sx={{ width: 20 }} /> 055 321 232, 065 991
                   880
                 </Typography>
               </Box>
@@ -172,41 +181,43 @@ const ContactPage = () => {
                 sx={{
                   fontSize: "1rem",
                   color: "black",
-                  paddingTop: 3,
+                  paddingTop: 2,
                 }}
               >
                 Pronađite nas:
               </Typography>
-              <Button
-                size="small"
-                sx={{
-                  color: "white",
-                  backgroundColor: "#0011ff",
-                  textTransform: "Capitalize",
-                  marginRight: 1,
-                  "&:hover": {
-                    background: "#0011ff",
-                    filter: "brightness(85%)",
-                  },
-                }}
-              >
-                <FacebookIcon sx={{ color: "white" }} />: Poslovi Bijeljina
-              </Button>
-              <Button
-                onClick={() => navigate()}
-                size="small"
-                sx={{
-                  color: "white",
-                  bgcolor: "red",
-                  textTransform: "lowercase",
-                  "&:hover": {
-                    background: "#d14541",
-                    filter: "brightness(85%)",
-                  },
-                }}
-              >
-                <InstagramIcon sx={{ color: "white" }} /> @poslovi_bijeljina
-              </Button>
+              <Box>
+                <Button
+                  size="small"
+                  sx={{
+                    color: "white",
+                    backgroundColor: "#0011ff",
+                    textTransform: "Capitalize",
+                    marginRight: 1,
+                    "&:hover": {
+                      background: "#0011ff",
+                      filter: "brightness(85%)",
+                    },
+                  }}
+                >
+                  <FacebookIcon sx={{ color: "white" }} />: Poslovi Bijeljina
+                </Button>
+                <Button
+                  onClick={() => navigate()}
+                  size="small"
+                  sx={{
+                    color: "white",
+                    bgcolor: "red",
+                    textTransform: "lowercase",
+                    "&:hover": {
+                      background: "#d14541",
+                      filter: "brightness(85%)",
+                    },
+                  }}
+                >
+                  <InstagramIcon sx={{ color: "white" }} /> @poslovi_bijeljina
+                </Button>
+              </Box>
             </CardContent>
           </Card>
         </Container>
