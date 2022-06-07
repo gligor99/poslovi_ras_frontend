@@ -6,8 +6,11 @@ import Button from "@mui/material/Button";
 //Icons
 import ErrorIcon from "@mui/icons-material/Error";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+//Router
+import { useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Container
@@ -29,6 +32,7 @@ const ErrorPage = () => {
         >
           <Button
             variant="contained"
+            onClick={() => navigate(-1)}
             sx={{
               height: "100%",
               bgcolor: "#f4f4f4",
