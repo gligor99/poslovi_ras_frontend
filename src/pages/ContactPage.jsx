@@ -16,9 +16,7 @@ import { Breadcrumb } from "./../components/index";
 const ContactPage = () => {
   return (
     <>
-      <Box sx={{ height: "50px", bgcolor: "red" }}>
-        <Breadcrumb />
-      </Box>
+      <Breadcrumb />
       <Container
         maxWidth="xl"
         sx={{
@@ -29,7 +27,6 @@ const ContactPage = () => {
           height: 800,
         }}
       >
-        <Breadcrumb />
         <Container
           maxWidth="xl"
           sx={{

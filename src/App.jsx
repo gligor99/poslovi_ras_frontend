@@ -1,5 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import { AboutPage, ContactPage, HomePage, SharedLayout } from "./pages/index";
+import {
+  AboutPage,
+  ContactPage,
+  HomePage,
+  SharedLayout,
+  JobsPage,
+  ErrorPage,
+  SingleJob,
+} from "./pages/index";
 import "./index.css";
 
 function App() {
@@ -9,6 +17,9 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="contact" element={<ContactPage />} />
+        <Route path="jobs" element={<JobsPage />} />
+        <Route path="/jobs/:jobID" element={<SingleJob />} />
+        <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>
   );

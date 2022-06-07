@@ -4,6 +4,7 @@ import Stack from "@mui/material/Stack";
 import Link from "@mui/material/Link";
 //Components
 import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Box from "@mui/material/Box";
 //Icons
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
@@ -41,10 +42,21 @@ const Breadcrumb = () => {
     </Typography>,
   ];
   return (
-    <Stack spacing={2}>
+    <Stack
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        alignItems: "center",
+        height: "50px",
+        bgcolor: "red",
+      }}
+    >
+      <Box sx={{ width: "40%", height: "100%" }}></Box>
       <Breadcrumbs
         sx={{
-          height: "50px",
+          height: "100%",
+          width: "50%",
           color: "white",
           display: "flex",
           flexDirection: "column",
