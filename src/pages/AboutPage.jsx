@@ -41,12 +41,12 @@ const AboutPage = () => {
           }}
         >
           <Accordion
-            sx={{ backgroundColor: "#d14541", marginBottom: "3px" }}
+            sx={{ backgroundColor: "tomato", marginBottom: "3px" }}
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}
           >
             <AccordionSummary
-              sx={{ color: "white", backgroundColor: "#d14541" }}
+              sx={{ color: "white" }}
               expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
               aria-controls="panel4bh-content"
               id="panel4bh-header"
@@ -72,7 +72,7 @@ const AboutPage = () => {
           </Accordion>
           <Accordion
             sx={{
-              backgroundColor: "#f4f4f4",
+              backgroundColor: "tomato",
               color: "black",
               marginBottom: "3px",
             }}
@@ -80,7 +80,7 @@ const AboutPage = () => {
             onChange={handleChange("panel2")}
           >
             <AccordionSummary
-              sx={{ color: "white", backgroundColor: "#d14541" }}
+              sx={{ color: "white" }}
               expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
               aria-controls="panel4bh-content"
               id="panel4bh-header"
@@ -100,7 +100,7 @@ const AboutPage = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion
-            sx={{ backgroundColor: "#d14541", marginBottom: "3px" }}
+            sx={{ backgroundColor: "tomato", marginBottom: "3px" }}
             expanded={expanded === "panel3"}
             onChange={handleChange("panel3")}
           >
@@ -132,7 +132,7 @@ const AboutPage = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion
-            sx={{ backgroundColor: "#d14541", marginBottom: "3px" }}
+            sx={{ backgroundColor: "tomato", marginBottom: "3px" }}
             expanded={expanded === "panel4"}
             onChange={handleChange("panel4")}
           >

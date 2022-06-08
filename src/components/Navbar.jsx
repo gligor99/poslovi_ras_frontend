@@ -123,19 +123,7 @@ const ResponsiveAppBar = () => {
             {pages.map((item) => (
               <NavLink
                 to={item.path}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: "20px",
-                  fontFamily: "Roboto",
-                  marginRight: 10,
-                  fontWeight: 500,
-                  textTransform: "uppercase",
-                  textDecoration: "none",
-                  color: "black",
-                }}
+                className={({ isActive }) => (isActive ? "active" : "link")}
                 key={item.page}
                 onClick={handleCloseNavMenu}
               >

@@ -49,7 +49,7 @@ const Breadcrumb = () => {
         justifyContent: "space-evenly",
         alignItems: "center",
         height: "50px",
-        bgcolor: "red",
+        bgcolor: "tomato",
       }}
     >
       <Box sx={{ width: "40%", height: "100%" }}></Box>

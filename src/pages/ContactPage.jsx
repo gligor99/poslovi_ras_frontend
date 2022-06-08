@@ -95,11 +95,12 @@ const ContactPage = () => {
             />
             <Button
               variant="contained"
-              color="error"
               sx={{
                 width: "90%",
                 margin: "5px 0px 0px 10px",
+                backgroundColor: "#f03207",
                 "&:hover": {
+                  backgroundColor: "tomato",
                   filter: "brightness(90%)",
                 },
               }}
@@ -201,10 +202,11 @@ const ContactPage = () => {
                   size="small"
                   sx={{
                     color: "white",
-                    bgcolor: "red",
+                    bgcolor: "#c21515",
                     textTransform: "lowercase",
                     "&:hover": {
-                      background: "#d14541",
+                      background: "#c20000",
+
                       filter: "brightness(85%)",
                     },
                   }}

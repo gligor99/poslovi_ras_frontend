@@ -34,8 +34,14 @@ const ErrorPage = () => {
             variant="contained"
             onClick={() => navigate(-1)}
             sx={{
+              width: "120px",
               height: "100%",
               bgcolor: "#f4f4f4",
+              padding: "6px 0px 6px 0px",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
               "&:hover": {
                 bgcolor: "#f4f4f4 ",
                 filter: "brightness(90%)",
@@ -44,19 +50,20 @@ const ErrorPage = () => {
           >
             <ArrowBackIcon
               sx={{
-                fontSize: "2.5rem",
+                fontSize: "2rem",
+                width: "30%",
                 color: "black",
               }}
             />
             <Typography
               sx={{
                 fontSize: "1.5rem",
+                width: "65%",
                 height: "100%",
                 textTransform: "Capitalize",
                 color: "black",
               }}
             >
-              {" "}
               Nazad
             </Typography>
           </Button>
