@@ -143,7 +143,7 @@ const Jobs = () => {
         >
           <Box
             sx={{
-              width: "15%",
+              width: "20%",
               mb: 2,
               backgroundColor: "#f4f4f4",
               boxShadow: 3,
