@@ -21,7 +21,7 @@ const Breadcrumb = () => {
       href="/"
       onClick={handleClick}
     >
-      MUI
+      jedan
     </Link>,
     <Link
       underline="hover"
@@ -30,7 +30,7 @@ const Breadcrumb = () => {
       href="/material-ui/getting-started/installation/"
       onClick={handleClick}
     >
-      Core
+      dva
     </Link>,
     <Typography
       key="3"
@@ -38,7 +38,7 @@ const Breadcrumb = () => {
         color: "white",
       }}
     >
-      Breadcrumb
+      tri
     </Typography>,
   ];
   return (
