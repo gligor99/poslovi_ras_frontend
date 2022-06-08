@@ -15,6 +15,29 @@ const Jobs = () => {
           width: "80%",
         }}
       >
+        {/* Naslov */}
+        <Box
+          sx={{
+            width: "90%",
+            height: "100%",
+            mb: 2,
+            backgroundColor: "#f4f4f4",
+            boxShadow: 3,
+          }}
+        >
+          <Typography
+            sx={{
+              textAlign: "center",
+              color: "black",
+              fontSize: "1.2rem",
+              pt: 1,
+              pb: 1,
+            }}
+          >
+            Aktivni oglasi za posao
+          </Typography>
+        </Box>
+        {/* Oglasi */}
         <Box
           sx={{
             backgroundColor: "tomato",
@@ -25,8 +48,9 @@ const Jobs = () => {
             flexDirection: "row",
             justifyContent: "flex-start",
             alignItems: "center",
-            pl: "5px",
-            pr: "5px",
+            pl: "3px",
+            pr: "3px",
+            mb: 2,
             boxShadow: 3,
             borderRadius: "5px",
           }}
@@ -107,6 +131,42 @@ const Jobs = () => {
               </Button>
             </Box>
           </Card>
+        </Box>
+        {/* Dugme za prikaz svih oglasa */}
+        <Box
+          sx={{
+            width: "90%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "flex-end",
+          }}
+        >
+          <Box
+            sx={{
+              width: "15%",
+              mb: 2,
+              backgroundColor: "#f4f4f4",
+              boxShadow: 3,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "tomato",
+              borderRadius: "5px",
+            }}
+          >
+            <Button
+              sx={{
+                color: "white",
+                fontSize: "1rem",
+                fontWeight: "400",
+                textTransform: "Capitalize",
+                height: "30px",
+              }}
+            >
+              Prikaži sve
+            </Button>
+          </Box>
         </Box>
       </Container>
     </>

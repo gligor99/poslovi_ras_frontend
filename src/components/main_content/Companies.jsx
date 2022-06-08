@@ -1,15 +1,18 @@
+//MUI
+import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 const Companies = () => {
   return (
-    <Box
+    <Container
       sx={{
         backgroundColor: "white",
         border: "1px solid black",
         borderRadius: "5px",
         width: "40%",
+        boxShadow: 3,
       }}
     >
       {/* Naslov */}
@@ -71,7 +74,7 @@ const Companies = () => {
           kompanija 3{" "}
         </Typography>
       </Stack>
-    </Box>
+    </Container>
   );
 };
 

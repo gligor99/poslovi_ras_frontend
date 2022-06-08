@@ -10,14 +10,15 @@ const MainContent = () => {
     <Container
       maxWidth="xl"
       sx={{
-        backgroundColor: "gray",
+        backgroundColor: "#f4f4f4",
         height: "100%",
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center",
+        alignItems: "flex-start",
         padding: "20px 20px",
         mb: 4,
-        border: "1px solid black",
+        mt: 2,
+        boxShadow: 3,
       }}
     >
       <Jobs />
