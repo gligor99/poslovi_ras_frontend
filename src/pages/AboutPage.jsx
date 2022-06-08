@@ -91,7 +91,7 @@ const AboutPage = () => {
                 Drugi dio
               </Typography>
             </AccordionSummary>
-            <AccordionDetails sx={{ boxShadow: 3 }}>
+            <AccordionDetails sx={{ backgroundColor: "#f4f4f4", boxShadow: 3 }}>
               <Typography sx={{ color: "black", padding: "10px" }}>
                 Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
                 Integer sit amet egestas eros, vitae egestas augue. Duis vel est
