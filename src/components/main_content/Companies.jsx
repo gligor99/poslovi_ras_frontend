@@ -9,7 +9,7 @@ const Companies = () => {
         backgroundColor: "white",
         border: "1px solid black",
         borderRadius: "5px",
-        width: "35%",
+        width: "40%",
       }}
     >
       {/* Naslov */}

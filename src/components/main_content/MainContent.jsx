@@ -1,3 +1,4 @@
+//Components
 import Jobs from "./Jobs";
 import Companies from "./Companies";
 
@@ -15,6 +16,8 @@ const MainContent = () => {
         justifyContent: "space-between",
         alignItems: "center",
         padding: "20px 20px",
+        mb: 4,
+        border: "1px solid black",
       }}
     >
       <Jobs />
