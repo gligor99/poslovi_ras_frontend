@@ -9,65 +9,75 @@ const Companies = () => {
     <Container
       sx={{
         backgroundColor: "white",
-        border: "1px solid black",
         borderRadius: "5px",
-        width: "40%",
+        width: "45%",
         boxShadow: 3,
       }}
     >
       {/* Naslov */}
-      <Stack spacing={2} sx={{ borderBottom: "2px solid black" }}>
+      <Stack sx={{ borderBottom: "1px solid tomato", mb: 3 }}>
         <Typography
-          variant="h5"
+          variant="h6"
           sx={{
             textAlign: "center",
             paddingTop: 1,
           }}
         >
-          {" "}
-          Kompanije:{" "}
+          Kompanije
         </Typography>
       </Stack>
       {/* Kompanije */}
       <Stack
-        spacing={2}
-        sx={{ border: "1px solid black", borderRadius: "10px", margin: 1 }}
+        sx={{
+          boxShadow: 3,
+          borderRadius: "5px",
+          margin: 1,
+          pl: 1,
+          pr: 1,
+        }}
       >
+        <Typography
+          sx={{
+            textAlign: "center",
+            paddingTop: 1,
+            fontSize: "1.2rem",
+          }}
+        >
+          D.O.O firma 1
+        </Typography>
+      </Stack>
+      <Stack sx={{ boxShadow: 3, borderRadius: "5px", margin: 1 }}>
         <Typography
           variant="h5"
           sx={{
             textAlign: "center",
             paddingTop: 1,
+            fontSize: "1.2rem",
+          }}
+        >
+          firma 2 D.O.O
+        </Typography>
+      </Stack>
+      <Stack sx={{ boxShadow: 3, borderRadius: "5px", margin: 1 }}>
+        <Typography
+          variant="h5"
+          sx={{
+            textAlign: "center",
+            paddingTop: 1,
+            fontSize: "1.2rem",
           }}
         >
           {" "}
-          kompanija 1
+          kompanija 3{" "}
         </Typography>
       </Stack>
-      <Stack
-        spacing={2}
-        sx={{ border: "1px solid black", borderRadius: "10px", margin: 1 }}
-      >
+      <Stack sx={{ boxShadow: 3, borderRadius: "5px", margin: 1 }}>
         <Typography
           variant="h5"
           sx={{
             textAlign: "center",
             paddingTop: 1,
-          }}
-        >
-          {" "}
-          kompanija 2{" "}
-        </Typography>
-      </Stack>
-      <Stack
-        spacing={2}
-        sx={{ border: "1px solid black", borderRadius: "10px", margin: 1 }}
-      >
-        <Typography
-          variant="h5"
-          sx={{
-            textAlign: "center",
-            paddingTop: 1,
+            fontSize: "1.2rem",
           }}
         >
           {" "}
