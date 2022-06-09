@@ -1,19 +1,20 @@
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+
 const Footer = () => {
   return (
     <>
-      <Container
-        maxWidth={false}
+      <Box
         sx={{
           bgcolor: "#f4f4f4",
-          boxShadow: 3,
-          height: "200px",
-          margin: 0,
+          height: "100px",
+          width: "100%",
+          position: "sticky",
+          border: "1px solid red",
         }}
       >
         <Typography>This is footer</Typography>
-      </Container>
+      </Box>
     </>
   );
 };
