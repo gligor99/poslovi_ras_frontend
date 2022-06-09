@@ -94,7 +94,7 @@ const Jobs = () => {
             <Box
               sx={{
                 height: "100%",
-                width: "55%",
+                width: "50%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -139,7 +139,7 @@ const Jobs = () => {
             <Box
               sx={{
                 height: "100%",
-                width: "15%",
+                width: "20%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -149,7 +149,7 @@ const Jobs = () => {
               <Box
                 sx={{
                   height: "80%",
-                  width: "100%",
+                  width: "95%",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-end",
@@ -161,7 +161,7 @@ const Jobs = () => {
                   sx={{
                     color: "white",
                     backgroundColor: "red",
-                    width: "100%",
+                    width: "80%",
                     height: "15%",
                     "&:hover": {
                       color: "white",
@@ -229,7 +229,7 @@ const Jobs = () => {
             <Box
               sx={{
                 height: "100%",
-                width: "55%",
+                width: "50%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -272,7 +272,7 @@ const Jobs = () => {
             <Box
               sx={{
                 height: "100%",
-                width: "15%",
+                width: "20%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -282,7 +282,7 @@ const Jobs = () => {
               <Box
                 sx={{
                   height: "80%",
-                  width: "100%",
+                  width: "95%",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-end",
@@ -294,7 +294,7 @@ const Jobs = () => {
                   sx={{
                     color: "white",
                     backgroundColor: "red",
-                    width: "100%",
+                    width: "80%",
                     height: "15%",
                     "&:hover": {
                       color: "white",

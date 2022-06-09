@@ -206,7 +206,6 @@ const ContactPage = () => {
                     textTransform: "lowercase",
                     "&:hover": {
                       background: "#c20000",
-
                       filter: "brightness(85%)",
                     },
                   }}
