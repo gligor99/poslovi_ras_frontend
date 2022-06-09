@@ -19,7 +19,7 @@ const Footer = () => {
           position: "sticky",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "flex-start",
+          justifyContent: "center",
           alignItems: "center",
         }}
       >
@@ -35,9 +35,8 @@ const Footer = () => {
           <NavLink
             style={{
               textDecoration: "none",
-              paddingRight: "20px",
-
               color: "tomato",
+              mr: 1,
             }}
             to="/about"
             element={<AboutPage />}
@@ -45,10 +44,11 @@ const Footer = () => {
             {" "}
             <Typography
               sx={{
-                mt: 1,
                 fontSize: "1rem",
                 fontWeight: "500",
+                mr: 2,
               }}
+              style={{ display: "inline" }}
             >
               O nama
             </Typography>
@@ -64,52 +64,44 @@ const Footer = () => {
             {" "}
             <Typography
               sx={{
-                mt: 1,
                 fontSize: "1rem",
                 fontWeight: "500",
+                mr: 5,
               }}
             >
               {" "}
               Kontakt{" "}
             </Typography>
           </NavLink>
-        </Box>
-        {/* linkovi fb i insta */}
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "50%",
-            width: "50px",
-          }}
-        >
-          <NavLink
-            style={{
-              textDecoration: "none",
-              width: "50%",
-              height: "50%",
-              marginRight: 5,
-            }}
-            to="/contact"
-            element={<ContactPage />}
-          >
-            <FacebookIcon sx={{ height: "100%", color: "#0011ff" }} />
-          </NavLink>
+          <Box>
+            <NavLink
+              style={{
+                textDecoration: "none",
+                width: "50%",
+                height: "50%",
+              }}
+              to="/contact"
+              element={<ContactPage />}
+            >
+              <FacebookIcon sx={{ mr: 1, height: "100%", color: "#0011ff" }} />
+            </NavLink>
 
-          <NavLink
-            style={{
-              textDecoration: "none",
-              width: "50%",
-              height: "50%",
-            }}
-            to="/about"
-            element={<AboutPage />}
-          >
-            <InstagramIcon sx={{ height: "100%", color: "#c21515" }} />
-          </NavLink>
+            <NavLink
+              style={{
+                textDecoration: "none",
+                width: "50%",
+                height: "50%",
+              }}
+              to="/about"
+              element={<AboutPage />}
+            >
+              <InstagramIcon sx={{ height: "100%", color: "#c21515" }} />
+            </NavLink>
+          </Box>
+          {/* fb % insta  */}
         </Box>
+        {/* copyright */}
+
         <Box sx={{ mb: 1 }}>
           <Typography
             variant="p"
