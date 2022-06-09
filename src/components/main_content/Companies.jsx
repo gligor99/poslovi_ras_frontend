@@ -9,8 +9,10 @@ const Companies = () => {
       sx={{
         backgroundColor: "white",
         borderRadius: "5px",
-        width: "45%",
+        width: "30%",
         boxShadow: 3,
+        mr: 0,
+        ml: 0,
       }}
     >
       {/* Naslov */}
@@ -45,42 +47,61 @@ const Companies = () => {
           D.O.O firma 1
         </Typography>
       </Stack>
-      <Stack sx={{ boxShadow: 3, borderRadius: "5px", margin: 1 }}>
+      <Stack
+        sx={{
+          boxShadow: 3,
+          borderRadius: "5px",
+          margin: 1,
+          pl: 1,
+          pr: 1,
+        }}
+      >
         <Typography
-          variant="h5"
           sx={{
             textAlign: "center",
             paddingTop: 1,
             fontSize: "1.2rem",
           }}
         >
-          firma 2 D.O.O
+          D.O.O firma 2
         </Typography>
       </Stack>
-      <Stack sx={{ boxShadow: 3, borderRadius: "5px", margin: 1 }}>
+      <Stack
+        sx={{
+          boxShadow: 3,
+          borderRadius: "5px",
+          margin: 1,
+          pl: 1,
+          pr: 1,
+        }}
+      >
         <Typography
-          variant="h5"
           sx={{
             textAlign: "center",
             paddingTop: 1,
             fontSize: "1.2rem",
           }}
         >
-          {" "}
-          kompanija 3{" "}
+          D.O.O firma 3
         </Typography>
       </Stack>
-      <Stack sx={{ boxShadow: 3, borderRadius: "5px", margin: 1 }}>
+      <Stack
+        sx={{
+          boxShadow: 3,
+          borderRadius: "5px",
+          margin: 1,
+          pl: 1,
+          pr: 1,
+        }}
+      >
         <Typography
-          variant="h5"
           sx={{
             textAlign: "center",
             paddingTop: 1,
             fontSize: "1.2rem",
           }}
         >
-          {" "}
-          kompanija 3{" "}
+          D.O.O firma 4
         </Typography>
       </Stack>
     </Container>

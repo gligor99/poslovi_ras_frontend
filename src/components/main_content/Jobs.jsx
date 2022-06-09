@@ -10,15 +10,19 @@ import logo from "./../../assets/img/test.png";
 const Jobs = () => {
   return (
     <>
-      <Container
+      <Box
         sx={{
-          width: "80%",
+          width: "60%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         {/* Naslov */}
         <Box
           sx={{
-            width: "90%",
+            width: "100%",
             height: "100%",
             mb: 2,
             backgroundColor: "#f4f4f4",
@@ -41,7 +45,7 @@ const Jobs = () => {
 
         <Box
           sx={{
-            width: "90%",
+            width: "100%",
             height: "250px",
             display: "flex",
             flexDirection: "column",
@@ -177,7 +181,7 @@ const Jobs = () => {
         {/* Dugme za prikaz svih oglasa */}
         <Box
           sx={{
-            width: "90%",
+            width: "100%",
             display: "flex",
             flexDirection: "row",
             justifyContent: "flex-end",
@@ -209,7 +213,7 @@ const Jobs = () => {
             </Button>
           </Box>
         </Box>
-      </Container>
+      </Box>
     </>
   );
 };
