@@ -19,7 +19,7 @@ const MainContent = () => {
         padding: "20px 20px",
         mb: 4,
         mt: 2,
-        boxShadow: 3,
+        boxShadow: 1,
       }}
     >
       <Jobs />

@@ -1,5 +1,4 @@
-import React from "react";
-
+//MUI
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -8,8 +7,10 @@ import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 
+import { useState } from "react";
+
 const SearchBar = () => {
-  const [age, setAge] = React.useState("");
+  const [age, setAge] = useState("");
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -21,16 +22,16 @@ const SearchBar = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: 1 / 2,
-        height: 100,
+        width: "50%",
+        height: "100px",
         borderRadius: 5,
-        bgcolor: "#fff",
+        bgcolor: "#f4f4f4",
         boxShadow: 3,
       }}
     >
       <Box
         sx={{
-          width: 1,
+          width: "100%",
           display: "flex",
           justifyContent: "space-evenly",
         }}
@@ -39,7 +40,7 @@ const SearchBar = () => {
           error
           sx={{ borderRadius: 25 }}
           id="outlined-basic"
-          label="Outlined"
+          label="Naziv"
           variant="outlined"
         />
         <FormControl sx={{ minWidth: 130 }}>
@@ -63,9 +64,24 @@ const SearchBar = () => {
             <MenuItem value={22}>Twenty one and a half</MenuItem>
           </Select>
         </FormControl>
-        <Button size="large" variant="outlined" color="error">
-          Pretraži
-        </Button>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Button
+            sx={{
+              height: "70%",
+            }}
+            variant="contained"
+            color="error"
+          >
+            Pretraži
+          </Button>
+        </Box>
       </Box>
     </Box>
   );

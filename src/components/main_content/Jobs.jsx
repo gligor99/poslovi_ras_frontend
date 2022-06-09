@@ -25,7 +25,6 @@ const Jobs = () => {
             height: "100%",
             mb: 2,
             backgroundColor: "#f4f4f4",
-            boxShadow: 3,
           }}
         >
           <Typography
@@ -64,7 +63,7 @@ const Jobs = () => {
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "flex-start",
-              bgcolor: "#f4f4f4",
+              bgcolor: "white",
               pr: "5px",
               boxShadow: 3,
             }}
@@ -199,7 +198,7 @@ const Jobs = () => {
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "flex-start",
-              bgcolor: "#f4f4f4",
+              bgcolor: "white",
               pr: "5px",
               boxShadow: 3,
             }}
@@ -235,8 +234,6 @@ const Jobs = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                pl: "10px",
-                pr: "5px",
               }}
             >
               <Box

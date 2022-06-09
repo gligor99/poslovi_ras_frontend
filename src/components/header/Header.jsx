@@ -11,15 +11,14 @@ const Header = () => {
   return (
     <Box
       sx={{
-        zIndex: -1,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        width: 1,
-        height: 400,
+        width: "100%",
+        height: "350px",
         bgcolor: "#f4f4f4",
-        boxShadow: 3,
+        boxShadow: 1,
       }}
     >
       <Typography variant="h4" sx={{ m: 2, fontWeight: 900 }}>
