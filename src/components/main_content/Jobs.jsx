@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 //test img
-import logo from "./../../assets/img/logo-wbg (1).png";
+import logo from "./../../assets/img/test.png";
 const Jobs = () => {
   return (
     <>
@@ -38,97 +38,139 @@ const Jobs = () => {
           </Typography>
         </Box>
         {/* Oglasi */}
+
         <Box
           sx={{
-            backgroundColor: "tomato",
             width: "90%",
-            height: "70px",
-            mb: 1,
+            height: "250px",
             display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-start",
+            flexDirection: "column",
+            justifyContent: "center",
             alignItems: "center",
             pl: "3px",
             pr: "3px",
             mb: 2,
-            boxShadow: 3,
             borderRadius: "5px",
           }}
         >
           <Card
             sx={{
-              height: "90%",
+              height: "100%",
               width: "100%",
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
-              justifyContent: "center",
+              justifyContent: "flex-start",
               bgcolor: "#f4f4f4",
               pr: "5px",
+              boxShadow: 3,
             }}
           >
             <Box
-              component="img"
               sx={{
-                height: "90%",
+                height: "100%",
                 width: "30%",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundAttachment: "fixed",
-              }}
-              src={logo}
-            ></Box>
-
-            <Box
-              sx={{
-                height: "90%",
-                width: "50%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "flex-start",
-                pl: "10px",
-                pr: "5px",
-              }}
-            >
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: "1rem",
-                  color: "black",
-                }}
-              >
-                D.O.O Naziv firme dwqdw
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                width: "20%",
-                height: "90%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                mr: "5px",
               }}
             >
-              <Button
-                size="small"
+              <Box
+                component="img"
                 sx={{
-                  color: "white",
-                  backgroundColor: "red",
+                  height: "min-content",
                   width: "80%",
-                  height: "60",
-                  "&:hover": {
-                    color: "white",
-                    backgroundColor: "red",
-                    filter: "brightness(70%)",
-                  },
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+                src={logo}
+              ></Box>
+            </Box>
+
+            <Box
+              sx={{
+                height: "100%",
+                width: "55%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                pl: "10px",
+                pr: "5px",
+              }}
+            >
+              <Box
+                sx={{
+                  height: "80%",
+                  width: "100%",
                 }}
               >
-                Detalji
-              </Button>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    height: "20%",
+                    width: "100%",
+                    fontSize: "1rem",
+                    fontFamily: "Roboto",
+                    color: "black",
+                    textAlign: "center",
+                  }}
+                >
+                  D.O.O Naziv firme dwqdw
+                </Typography>
+                <Typography
+                  variant="p"
+                  sx={{
+                    height: "80%",
+                    width: "100%",
+                    fontFamily: "Roboto",
+                  }}
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+                  magni officiis tempora laborum similique deleniti provident
+                  distinctio minus nemo rerum?
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                height: "100%",
+                width: "15%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  height: "80%",
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-end",
+                  alignItems: "center",
+                }}
+              >
+                <Button
+                  size="small"
+                  sx={{
+                    color: "white",
+                    backgroundColor: "red",
+                    width: "100%",
+                    height: "15%",
+                    "&:hover": {
+                      color: "white",
+                      backgroundColor: "red",
+                      filter: "brightness(70%)",
+                    },
+                  }}
+                >
+                  Detalji
+                </Button>
+              </Box>
             </Box>
           </Card>
         </Box>
@@ -145,7 +187,6 @@ const Jobs = () => {
             sx={{
               width: "20%",
               mb: 2,
-              backgroundColor: "#f4f4f4",
               boxShadow: 3,
               display: "flex",
               flexDirection: "column",
