@@ -9,7 +9,7 @@ const Companies = () => {
       sx={{
         backgroundColor: "white",
         borderRadius: "5px",
-        width: "30%",
+        width: "35%",
         boxShadow: 1,
         mr: 0,
         ml: 0,

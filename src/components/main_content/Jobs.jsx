@@ -11,7 +11,7 @@ const Jobs = () => {
     <>
       <Box
         sx={{
-          width: "60%",
+          width: "55%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
