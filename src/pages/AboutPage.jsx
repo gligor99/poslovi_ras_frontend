@@ -19,7 +19,7 @@ const AboutPage = () => {
   };
   return (
     <>
-      <Box sx={{ height: "50px", bgcolor: "red" }}>
+      <Box sx={{ height: "50px" }}>
         <Breadcrumb />
       </Box>
       <Container
@@ -41,7 +41,7 @@ const AboutPage = () => {
           }}
         >
           <Accordion
-            sx={{ backgroundColor: "tomato", marginBottom: "3px" }}
+            sx={{ bgcolor: "primary.main", marginBottom: "3px" }}
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}
           >
@@ -63,7 +63,7 @@ const AboutPage = () => {
                 boxShadow: 3,
               }}
             >
-              <Typography sx={{ color: "back", padding: "10px" }}>
+              <Typography sx={{ color: "black", padding: "10px" }}>
                 Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
                 Integer sit amet egestas eros, vitae egestas augue. Duis vel est
                 augue.
@@ -72,7 +72,7 @@ const AboutPage = () => {
           </Accordion>
           <Accordion
             sx={{
-              backgroundColor: "tomato",
+              bgcolor: "primary.main",
               color: "black",
               marginBottom: "3px",
             }}
@@ -91,7 +91,7 @@ const AboutPage = () => {
                 Drugi dio
               </Typography>
             </AccordionSummary>
-            <AccordionDetails sx={{ backgroundColor: "#f4f4f4", boxShadow: 3 }}>
+            <AccordionDetails sx={{ boxShadow: 3 }}>
               <Typography sx={{ color: "black", padding: "10px" }}>
                 Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
                 Integer sit amet egestas eros, vitae egestas augue. Duis vel est
@@ -100,7 +100,7 @@ const AboutPage = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion
-            sx={{ backgroundColor: "tomato", marginBottom: "3px" }}
+            sx={{ bgcolor: "primary.main", marginBottom: "3px" }}
             expanded={expanded === "panel3"}
             onChange={handleChange("panel3")}
           >
@@ -132,7 +132,7 @@ const AboutPage = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion
-            sx={{ backgroundColor: "tomato", marginBottom: "3px" }}
+            sx={{ bgcolor: "primary.main", marginBottom: "3px" }}
             expanded={expanded === "panel4"}
             onChange={handleChange("panel4")}
           >

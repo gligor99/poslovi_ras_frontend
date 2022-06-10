@@ -77,7 +77,7 @@ const SearchBar = () => {
               height: "70%",
             }}
             variant="contained"
-            color="error"
+            color="neutral"
           >
             Pretraži
           </Button>
