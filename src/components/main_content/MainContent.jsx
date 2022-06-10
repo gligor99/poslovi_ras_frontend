@@ -10,7 +10,7 @@ const MainContent = () => {
     <Container
       maxWidth="xl"
       sx={{
-        backgroundColor: "#f4f4f4",
+        backgroundColor: "background.main",
         height: "100%",
         display: "flex",
         flexDirection: "row",

@@ -24,12 +24,15 @@ const Jobs = () => {
             width: "100%",
             height: "100%",
             mb: 2,
-            backgroundColor: "#f4f4f4",
+            backgroundColor: "white",
+            boxShadow: 1,
           }}
         >
           <Typography
             sx={{
               textAlign: "center",
+              textTransform: "uppercase",
+              fontWeight: "bold",
               color: "black",
               fontSize: "1.2rem",
               pt: 1,
@@ -160,12 +163,12 @@ const Jobs = () => {
                   size="small"
                   sx={{
                     color: "white",
-                    backgroundColor: "red",
+                    backgroundColor: "primary.main",
                     width: "80%",
                     height: "15%",
                     "&:hover": {
                       color: "white",
-                      backgroundColor: "red",
+                      backgroundColor: "primary.main",
                       filter: "brightness(70%)",
                     },
                   }}
@@ -293,12 +296,12 @@ const Jobs = () => {
                   size="small"
                   sx={{
                     color: "white",
-                    backgroundColor: "red",
+                    backgroundColor: "primary.main",
                     width: "80%",
                     height: "15%",
                     "&:hover": {
                       color: "white",
-                      backgroundColor: "red",
+                      backgroundColor: "primary.main",
                       filter: "brightness(70%)",
                     },
                   }}
@@ -317,28 +320,34 @@ const Jobs = () => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "flex-end",
+            mt: 1,
           }}
         >
           <Box
             sx={{
-              width: "20%",
+              width: "25%",
               mb: 2,
               boxShadow: 3,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              backgroundColor: "tomato",
+              backgroundColor: "secondary.main",
               borderRadius: "5px",
             }}
           >
             <Button
               sx={{
+                width: "100%",
                 color: "white",
                 fontSize: "1rem",
                 fontWeight: "400",
                 textTransform: "Capitalize",
                 height: "30px",
+                "&:hover": {
+                  backgroundColor: "secondary.main",
+                  filter: "brightness(70%)",
+                },
               }}
             >
               Prikaži sve

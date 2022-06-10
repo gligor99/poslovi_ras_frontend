@@ -35,7 +35,7 @@ const Breadcrumb = () => {
     <Typography
       key="3"
       sx={{
-        color: "white",
+        color: "background.main",
       }}
     >
       tri
@@ -49,7 +49,7 @@ const Breadcrumb = () => {
         justifyContent: "space-evenly",
         alignItems: "center",
         height: "50px",
-        bgcolor: "tomato",
+        bgcolor: "primary.main",
       }}
     >
       <Box sx={{ width: "40%", height: "100%" }}></Box>
@@ -57,7 +57,7 @@ const Breadcrumb = () => {
         sx={{
           height: "100%",
           width: "50%",
-          color: "white",
+          color: "background.main",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

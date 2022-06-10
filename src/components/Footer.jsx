@@ -13,7 +13,7 @@ const Footer = () => {
     <>
       <Box
         sx={{
-          bgcolor: "#f4f4f4",
+          bgcolor: "background.main",
           height: "100px",
           width: "100%",
           position: "sticky",
@@ -35,7 +35,7 @@ const Footer = () => {
           <NavLink
             style={{
               textDecoration: "none",
-              color: "tomato",
+              color: "#f05454",
               mr: 1,
             }}
             to="/about"
@@ -56,7 +56,7 @@ const Footer = () => {
           <NavLink
             style={{
               textDecoration: "none",
-              color: "tomato",
+              color: "#f05454",
             }}
             to="/contact"
             element={<AboutPage />}

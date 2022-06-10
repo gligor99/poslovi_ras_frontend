@@ -57,7 +57,11 @@ const ResponsiveAppBar = () => {
   return (
     <AppBar
       position="relative"
-      style={{ zIndex: 99, background: "#fff", color: "#000" }}
+      sx={{
+        bgcolor: "background.main",
+        color: "#000",
+      }}
+      style={{ zIndex: 99 }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -134,7 +138,7 @@ const ResponsiveAppBar = () => {
 
           {/* Button za dodavanje novog oglasa */}
           <Box sx={{ flexGrow: 0 }}>
-            <Button variant="outlined" color="error" sx={{ marginRight: 2 }}>
+            <Button variant="outlined" color="primary" sx={{ marginRight: 2 }}>
               Dodaj posao
             </Button>
             <Tooltip title="Open settings">

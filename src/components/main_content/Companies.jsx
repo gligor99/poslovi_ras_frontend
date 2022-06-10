@@ -16,7 +16,12 @@ const Companies = () => {
       }}
     >
       {/* Naslov */}
-      <Stack sx={{ borderBottom: "1px solid tomato", mb: 3 }}>
+      <Stack
+        sx={{
+          borderBottom: "1px solid tomato",
+          mb: 3,
+        }}
+      >
         <Typography
           variant="h6"
           sx={{

@@ -17,7 +17,7 @@ const Header = () => {
         alignItems: "center",
         width: "100%",
         height: "350px",
-        bgcolor: "#f4f4f4",
+        bgcolor: "background.main",
         boxShadow: 1,
       }}
     >

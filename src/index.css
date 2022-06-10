@@ -13,7 +13,7 @@
   color: black;
 }
 .link:hover {
-  color: tomato;
+  color: #f05454;
 }
 .link:not(:last-child) {
   margin-right: 15px;
@@ -25,7 +25,7 @@
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  color: tomato;
+  color: #64748b;
 }
 .active:not(:last-child) {
   margin-right: 15px;
