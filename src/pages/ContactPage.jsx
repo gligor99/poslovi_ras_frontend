@@ -79,13 +79,14 @@ const ContactPage = () => {
               autoComplete="current-password"
               style={{ width: "90%" }}
             />
+
             <TextareaAutosize
               minRows={5}
               placeholder="Unesite poruku"
               style={{
-                width: "90%",
+                width: "70%",
                 padding: "10px",
-                margin: "10px 0 10px 10px",
+                margin: "10px 0 10px 11px",
                 resize: "none",
                 border: "1px solid lightgray",
                 borderRadius: 3,
@@ -93,12 +94,13 @@ const ContactPage = () => {
                 fontSize: "14px",
               }}
             />
+
             <Button
               variant="contained"
               sx={{
-                width: "90%",
+                width: "20%",
                 margin: "5px 0px 0px 10px",
-                backgroundColor: "#f03207",
+                backgroundColor: "primary.main",
                 "&:hover": {
                   backgroundColor: "tomato",
                   filter: "brightness(90%)",
