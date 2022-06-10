@@ -58,8 +58,9 @@ const ResponsiveAppBar = () => {
     <AppBar
       position="relative"
       sx={{
-        bgcolor: "background.main",
+        bgcolor: "#fff",
         color: "#000",
+        boxShadow: 1,
       }}
       style={{ zIndex: 99 }}
     >

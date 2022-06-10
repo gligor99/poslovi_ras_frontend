@@ -26,7 +26,7 @@ const SearchBar = () => {
         height: "100px",
         borderRadius: 5,
         bgcolor: "#f4f4f4",
-        boxShadow: 3,
+        boxShadow: 1,
       }}
     >
       <Box

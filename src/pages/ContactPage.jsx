@@ -120,7 +120,7 @@ const ContactPage = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignContent: "center",
-              boxShadow: 3,
+              boxShadow: 1,
             }}
           >
             <CardContent>

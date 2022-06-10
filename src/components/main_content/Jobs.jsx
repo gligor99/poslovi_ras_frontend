@@ -21,11 +21,12 @@ const Jobs = () => {
         {/* Naslov */}
         <Box
           sx={{
-            width: "100%",
+            width: "70%",
             height: "100%",
             mb: 2,
             backgroundColor: "white",
             boxShadow: 1,
+            borderRadius: "10px",
           }}
         >
           <Typography
@@ -68,7 +69,7 @@ const Jobs = () => {
               justifyContent: "flex-start",
               bgcolor: "white",
               pr: "5px",
-              boxShadow: 3,
+              boxShadow: 1,
             }}
           >
             <Box
@@ -203,7 +204,7 @@ const Jobs = () => {
               justifyContent: "flex-start",
               bgcolor: "white",
               pr: "5px",
-              boxShadow: 3,
+              boxShadow: 1,
             }}
           >
             <Box
@@ -327,7 +328,7 @@ const Jobs = () => {
             sx={{
               width: "25%",
               mb: 2,
-              boxShadow: 3,
+              boxShadow: 1,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",

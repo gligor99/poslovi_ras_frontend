@@ -10,7 +10,7 @@ const Companies = () => {
         backgroundColor: "white",
         borderRadius: "5px",
         width: "30%",
-        boxShadow: 3,
+        boxShadow: 1,
         mr: 0,
         ml: 0,
       }}
@@ -18,7 +18,7 @@ const Companies = () => {
       {/* Naslov */}
       <Stack
         sx={{
-          borderBottom: "1px solid tomato",
+          borderBottom: "1px solid #F05454",
           mb: 3,
         }}
       >
@@ -35,7 +35,7 @@ const Companies = () => {
       {/* Kompanije */}
       <Stack
         sx={{
-          boxShadow: 3,
+          boxShadow: 1,
           borderRadius: "5px",
           margin: 1,
           pl: 1,
@@ -54,7 +54,7 @@ const Companies = () => {
       </Stack>
       <Stack
         sx={{
-          boxShadow: 3,
+          boxShadow: 1,
           borderRadius: "5px",
           margin: 1,
           pl: 1,
@@ -73,7 +73,7 @@ const Companies = () => {
       </Stack>
       <Stack
         sx={{
-          boxShadow: 3,
+          boxShadow: 1,
           borderRadius: "5px",
           margin: 1,
           pl: 1,
@@ -92,7 +92,7 @@ const Companies = () => {
       </Stack>
       <Stack
         sx={{
-          boxShadow: 3,
+          boxShadow: 1,
           borderRadius: "5px",
           margin: 1,
           pl: 1,
