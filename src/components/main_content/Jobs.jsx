@@ -21,7 +21,7 @@ const Jobs = () => {
         {/* Naslov */}
         <Box
           sx={{
-            width: "70%",
+            width: "50%",
             height: "100%",
             mb: 2,
             backgroundColor: "white",
@@ -328,7 +328,6 @@ const Jobs = () => {
             sx={{
               width: "25%",
               mb: 2,
-              boxShadow: 1,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",

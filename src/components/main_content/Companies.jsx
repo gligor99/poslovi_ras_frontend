@@ -1,115 +1,263 @@
 //MUI
 import Container from "@mui/material/Container";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+//test img
+import logo from "./../../assets/img/test.png";
 
 const Companies = () => {
   return (
-    <Container
+    <Box
       sx={{
-        backgroundColor: "white",
-        borderRadius: "5px",
         width: "35%",
-        boxShadow: 1,
-        mr: 0,
-        ml: 0,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       {/* Naslov */}
-      <Stack
+      <Box
         sx={{
-          borderBottom: "1px solid #F05454",
-          mb: 3,
+          width: "50%",
+          height: "100%",
+          mb: 2,
+          backgroundColor: "white",
+          boxShadow: 1,
+          borderRadius: "10px",
         }}
       >
         <Typography
-          variant="h6"
           sx={{
             textAlign: "center",
-            paddingTop: 1,
+            textTransform: "uppercase",
+            fontWeight: "bold",
+            color: "black",
+            fontSize: "1.2rem",
+            pt: 1,
+            pb: 1,
           }}
         >
           Kompanije
         </Typography>
-      </Stack>
-      {/* Kompanije */}
-      <Stack
+      </Box>
+      <Box
         sx={{
-          boxShadow: 1,
           borderRadius: "5px",
-          margin: 1,
-          pl: 1,
-          pr: 1,
+          width: "100%",
         }}
       >
-        <Typography
+        {/* Kompanije */}
+
+        <Box
           sx={{
-            textAlign: "center",
-            paddingTop: 1,
-            fontSize: "1.2rem",
+            boxShadow: 1,
+            borderRadius: "10px",
+            mb: 3,
+            height: "120px",
+            width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "white",
           }}
         >
-          D.O.O firma 1
-        </Typography>
-      </Stack>
-      <Stack
-        sx={{
-          boxShadow: 1,
-          borderRadius: "5px",
-          margin: 1,
-          pl: 1,
-          pr: 1,
-        }}
-      >
-        <Typography
+          <Box
+            sx={{
+              height: "80%",
+              width: "25%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              component="img"
+              sx={{
+                height: "100%",
+                width: "100%",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+              src={logo}
+            ></Box>
+          </Box>
+          <Box
+            sx={{
+              width: "55%",
+              height: "80%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: 1,
+            }}
+          >
+            <Typography
+              variant="p"
+              sx={{
+                paddingTop: 1,
+                fontFamily: "Roboto",
+                fontWeight: "500",
+                fontSize: "1rem",
+              }}
+            >
+              D.O.O firma 1
+            </Typography>
+          </Box>
+          <Box
+            sx={{
+              width: "15%",
+              height: "80%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "flex-end",
+            }}
+          >
+            <Button
+              sx={{
+                height: "25%",
+                width: "100%",
+                borderRadius: "5px",
+              }}
+              size="small"
+              variant="contained"
+              color="primary"
+            >
+              Više
+            </Button>
+          </Box>
+        </Box>
+
+        <Box
           sx={{
-            textAlign: "center",
-            paddingTop: 1,
-            fontSize: "1.2rem",
+            boxShadow: 1,
+            borderRadius: "10px",
+            mb: 3,
+            height: "120px",
+            width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "white",
           }}
         >
-          D.O.O firma 2
-        </Typography>
-      </Stack>
-      <Stack
-        sx={{
-          boxShadow: 1,
-          borderRadius: "5px",
-          margin: 1,
-          pl: 1,
-          pr: 1,
-        }}
-      >
-        <Typography
+          <Box
+            sx={{
+              height: "80%",
+              width: "25%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              component="img"
+              sx={{
+                height: "100%",
+                width: "100%",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+              src={logo}
+            ></Box>
+          </Box>
+          <Box
+            sx={{
+              width: "55%",
+              height: "80%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: 1,
+            }}
+          >
+            <Typography
+              variant="p"
+              sx={{
+                paddingTop: 1,
+                fontFamily: "Roboto",
+                fontWeight: "500",
+                fontSize: "1rem",
+              }}
+            >
+              D.O.O firma 1
+            </Typography>
+          </Box>
+          <Box
+            sx={{
+              width: "15%",
+              height: "80%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "flex-end",
+            }}
+          >
+            <Button
+              sx={{
+                height: "25%",
+                width: "100%",
+                borderRadius: "5px",
+              }}
+              size="small"
+              variant="contained"
+              color="primary"
+            >
+              Više
+            </Button>
+          </Box>
+        </Box>
+
+        {/* Dugme za prikaz svih kompanija */}
+        <Box
           sx={{
-            textAlign: "center",
-            paddingTop: 1,
-            fontSize: "1.2rem",
+            width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "flex-end",
+            mt: 2,
           }}
         >
-          D.O.O firma 3
-        </Typography>
-      </Stack>
-      <Stack
-        sx={{
-          boxShadow: 1,
-          borderRadius: "5px",
-          margin: 1,
-          pl: 1,
-          pr: 1,
-        }}
-      >
-        <Typography
-          sx={{
-            textAlign: "center",
-            paddingTop: 1,
-            fontSize: "1.2rem",
-          }}
-        >
-          D.O.O firma 4
-        </Typography>
-      </Stack>
-    </Container>
+          <Box
+            sx={{
+              width: "35%",
+              mb: 2,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "secondary.main",
+              borderRadius: "5px",
+            }}
+          >
+            <Button
+              sx={{
+                width: "100%",
+                color: "white",
+                fontSize: "1rem",
+                fontWeight: "400",
+                textTransform: "Capitalize",
+                height: "30px",
+                "&:hover": {
+                  backgroundColor: "secondary.main",
+                  filter: "brightness(70%)",
+                },
+              }}
+            >
+              Prikaži sve
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
