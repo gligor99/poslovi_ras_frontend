@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 //MUI
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import Link from "@mui/material/Link";
+// import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -62,12 +63,12 @@ const LoginPage = () => {
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
-                Zaboravili ste lozinku?
-              </Link>
+              {/* <Link  variant="body2">
+                  Zaboravili ste lozinku?
+                </Link> */}
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link to="/register" variant="body2">
                 {"Nemate nalog? Registrujte se."}
               </Link>
             </Grid>
