@@ -7,9 +7,6 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import Button from "@mui/material/Button";
 //Icons
-import GridViewIcon from "@mui/icons-material/GridView";
-import ListAltIcon from "@mui/icons-material/ListAlt";
-
 import logo from "./../assets/img/test.png";
 
 const JobsPage = () => {
@@ -63,28 +60,7 @@ const JobsPage = () => {
               mr: 5,
             }}
           >
-            <Box sx={{ height: "40px", width: "100px" }}>
-              <GridViewIcon
-                sx={{
-                  color: "primary.main",
-                  height: "100%",
-                  width: "50%",
-                  "&:hover": {
-                    cursor: "pointer",
-                  },
-                }}
-              />
-              <ListAltIcon
-                sx={{
-                  color: "primary.main",
-                  height: "100%",
-                  width: "50%",
-                  "&:hover": {
-                    cursor: "pointer",
-                  },
-                }}
-              />
-            </Box>
+         
           </Box>
         </Box>
         {/* Prikaz svih kompanija */}
