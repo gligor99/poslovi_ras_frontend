@@ -5,6 +5,7 @@ import JobsPage from "./JobsPage";
 import SingleJob from "./SingleJob";
 import LoginPage from "./LoginPage";
 import RegisterPage from "./RegisterPage";
+import ProfilePage from "./ProfilePage";
 import SharedLayout from "./SharedLayout";
 import ErrorPage from "./ErrorPage";
 
@@ -16,6 +17,7 @@ export {
   SingleJob,
   LoginPage,
   RegisterPage,
+  ProfilePage,
   SharedLayout,
   ErrorPage,
 };
