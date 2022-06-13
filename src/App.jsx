@@ -7,6 +7,7 @@ import {
   JobsPage,
   ErrorPage,
   SingleJob,
+  LoginPage,
 } from "./pages/index";
 import "./index.css";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="contact" element={<ContactPage />} />
         <Route path="jobs" element={<JobsPage />} />
         <Route path="/jobs/:jobID" element={<SingleJob />} />
+        <Route path="login" element={<LoginPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>
