@@ -116,6 +116,7 @@ const Companies = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "flex-end",
+              pr: 1,
             }}
           >
             <Button
@@ -199,6 +200,7 @@ const Companies = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "flex-end",
+              pr: 1,
             }}
           >
             <Button
