@@ -2,7 +2,9 @@ import HomePage from "./HomePage";
 import AboutPage from "./AboutPage";
 import ContactPage from "./ContactPage";
 import JobsPage from "./JobsPage";
-import SingleJob from "./SingleJob";
+import SingleJobPage from "./SingleJobPage";
+import SingleCompanyPage from "./SingleCompanyPage";
+import CompaniesPage from "./CompaniesPage";
 import LoginPage from "./LoginPage";
 import RegisterPage from "./RegisterPage";
 import ProfilePage from "./ProfilePage";
@@ -14,7 +16,9 @@ export {
   AboutPage,
   ContactPage,
   JobsPage,
-  SingleJob,
+  SingleJobPage,
+  SingleCompanyPage,
+  CompaniesPage,
   LoginPage,
   RegisterPage,
   ProfilePage,

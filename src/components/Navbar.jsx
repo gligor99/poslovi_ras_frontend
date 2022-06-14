@@ -25,6 +25,10 @@ const pages = [
     path: "/jobs",
   },
   {
+    page: "Kompanije",
+    path: "/companies",
+  },
+  {
     page: "O nama",
     path: "/about",
   },

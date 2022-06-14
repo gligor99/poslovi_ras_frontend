@@ -4,7 +4,9 @@ import {
   ContactPage,
   HomePage,
   JobsPage,
-  SingleJob,
+  SingleJobPage,
+  SingleCompanyPage,
+  CompaniesPage,
   LoginPage,
   RegisterPage,
   ProfilePage,
@@ -18,10 +20,12 @@ function App() {
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<HomePage />} />
+        <Route path="jobs" element={<JobsPage />} />
+        <Route path="jobs/:jobID" element={<SingleJobPage />} />
+        <Route path="companies" element={<CompaniesPage />} />
+        <Route path="companies/:companyID" element={<SingleCompanyPage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="contact" element={<ContactPage />} />
-        <Route path="jobs" element={<JobsPage />} />
-        <Route path="jobs/:jobID" element={<SingleJob />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="register" element={<RegisterPage />} />
         <Route path="profile" element={<ProfilePage />} />

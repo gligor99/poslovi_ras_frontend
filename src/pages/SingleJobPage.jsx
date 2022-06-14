@@ -11,7 +11,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import logo from "../assets/img/logo.png";
 
-const SingleJob = () => {
+const SingleJobPage = () => {
   return (
     <>
       <Breadcrumb />
@@ -186,4 +186,4 @@ const SingleJob = () => {
   );
 };
 
-export default SingleJob;
+export default SingleJobPage;
