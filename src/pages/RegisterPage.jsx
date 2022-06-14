@@ -5,7 +5,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-// import Link from "@mui/material/Link";
+import Input from "@mui/material/Input";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -85,40 +85,59 @@ const RegisterPage = () => {
                 }}
               />
             </Grid>
-            <Grid item xs={12}>
-              <Stack direction="row" alignItems="center" spacing={2}>
-                <IconButton
-                  color="primary"
-                  aria-label="upload picture"
-                  component="span"
+            <Grid
+              item
+              xs={12}
+              style={{
+                paddingTop: "0.3rem",
+                paddingBottom: "0.3rem",
+              }}
+            >
+              <Stack
+                direction="row"
+                alignItems="center"
+                sx={{
+                  height: "100%",
+                }}
+              >
+                <Typography
                   sx={{
-                    backgroundColor: "primary.main",
-                    borderRadius: "5px",
-                    "&:hover": {
-                      backgroundColor: "primary.main",
-                      filter: "brightness(80%)",
-                    },
+                    pr: 1,
                   }}
                 >
-                  <Typography
+                  {" "}
+                  Dodaj sliku
+                </Typography>
+                <label htmlFor="icon-button-file">
+                  <Input
                     sx={{
-                      color: "white",
-                      pr: 1,
+                      display: "none",
+                    }}
+                    accept="image/*"
+                    id="icon-button-file"
+                    type="file"
+                  />
+                  <IconButton
+                    color="primary"
+                    aria-label="upload picture"
+                    component="span"
+                    sx={{
+                      margin: 0,
+                      padding: 0,
                     }}
                   >
-                    Dodaj sliku{" "}
-                  </Typography>
-                  <PhotoCamera sx={{ color: "background.main" }} />
-                </IconButton>
+                    <PhotoCamera
+                      sx={{
+                        height: "30px",
+                        width: "30px",
+                      }}
+                    />
+                  </IconButton>
+                </label>
               </Stack>
             </Grid>
           </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-          >
+          <Button type="submit" fullWidth variant="contained" sx={{ mb: 2 }}>
             Registruj se
           </Button>
           <Grid container justifyContent="flex-end">
