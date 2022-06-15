@@ -34,7 +34,7 @@ const ProfilePage = () => {
           {/* Lijeva strana  */}
           <Box
             sx={{
-              height: "100%",
+              height: "80%",
               width: "55%",
               backgroundColor: "white",
               display: "flex",
@@ -77,15 +77,6 @@ const ProfilePage = () => {
                   reprehenderit.
                 </Typography>
               </Box>
-              <Typography
-                align="left"
-                sx={{
-                  fontFamily: "Roboto",
-                  pl: 2,
-                }}
-              >
-                Broj vaših oglasa: brojOglasa
-              </Typography>
             </Box>
           </Box>
           {/* Desna strana  */}
@@ -114,37 +105,68 @@ const ProfilePage = () => {
           </Box>
         </Box>
       </Box>
-      {/* Main content */}
+      {/* Glavni sadrzaj */}
       <Box
         sx={{
           height: "50px",
           width: "100%",
-          mt: 1,
+          mt: 5,
           display: "flex",
           flexDirection: "row",
-          justifyContent: "flex-end",
+          justifyContent: "space-between",
           alignItems: "center",
+          backgroundColor: "background.main",
+          boxShadow: 1,
         }}
       >
+        <Typography
+          align="left"
+          sx={{
+            fontFamily: "Roboto",
+            pl: 3,
+          }}
+        >
+          Broj vaših oglasa: 3
+        </Typography>
         <Box
           sx={{
             display: "flex",
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "background.main",
-            paddingLeft: 1,
             borderRadius: "5px",
-            boxShadow: 1,
           }}
         >
-          <Typography sx={{}}>Dodaj oglas</Typography>
-          <Button>
-            <AddIcon />
+          <Typography
+            sx={{
+              pr: 1,
+            }}
+          >
+            Dodaj oglas
+          </Typography>
+          <Button
+            sx={{
+              height: "35px",
+              width: "50px",
+              backgroundColor: "primary.main",
+              color: "white",
+              mr: 3,
+              "&:hover": {
+                backgroundColor: "primary.main",
+                filter: "brightness(80%)",
+              },
+            }}
+          >
+            <AddIcon
+              sx={{
+                height: "100%",
+                width: "100%",
+              }}
+            />
           </Button>
         </Box>
       </Box>
-      {/* Adds */}
+      {/* Kontejner za oglase */}
       <Box
         sx={{
           display: "flex",
@@ -157,35 +179,142 @@ const ProfilePage = () => {
       >
         <Box
           sx={{
-            width: "80%",
+            height: "90%",
+            width: "90%",
             display: "flex",
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
-            mb: 2,
-            mt: 2,
-            border: "1px solid red",
+            backgroundColor: "white",
+            boxShadow: 1,
+            mt: 3,
+            mb: 3,
           }}
         >
-          <Typography> sadsadsadsaass</Typography>
-          <Typography> sadsadsadsaass</Typography>
-          <Typography> sadsadsadsaass</Typography>
-        </Box>
-        <Box
-          sx={{
-            width: "80%",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            mb: 2,
-            mt: 2,
-            border: "1px solid red",
-          }}
-        >
-          <Typography> sadsadsadsaass</Typography>
-          <Typography> sadsadsadsaass</Typography>
-          <Typography> sadsadsadsaass</Typography>
+          {/* Oglas */}
+          <Box
+            sx={{
+              width: "100%",
+              height: "90%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              sx={{
+                height: "70%",
+                width: "90%",
+                backgroundColor: "white",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <Typography
+                variant="h6"
+                align="center"
+                sx={{
+                  fontFamily: "Roboto",
+                  mt: "1.5rem",
+                  mb: "1rem",
+                }}
+              >
+                {" "}
+                Naziv oglasa asdwqew wqdwqdwq{" "}
+              </Typography>
+              <Box
+                sx={{
+                  height: "95%",
+                  width: "95%",
+                }}
+              >
+                <Box sx={{ mb: "0.5rem" }}>
+                  <Typography sx={{ fontWeight: 500 }}>Opis posla:</Typography>
+                  <Typography>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Deleniti ratione similique itaque dolor dolore placeat
+                    molestiae quos neque. Ex recusandae accusantium libero rem
+                    corrupti excepturi magnam illum temporibus tempore
+                    doloremque!
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-around",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      mb: "0.5rem",
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        fontWeight: 500,
+                        pr: 1,
+                      }}
+                    >
+                      Plata:{" "}
+                    </Typography>
+                    <Typography> 321km</Typography>
+                  </Box>
+                  <Box sx={{ mb: "0.5rem" }}>
+                    <Typography
+                      sx={{
+                        fontWeight: 500,
+                        textAlign: "center",
+                      }}
+                    >
+                      Kontakt:
+                    </Typography>
+                    <Box
+                      sx={{
+                        display: "flex",
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          pl: 1,
+                        }}
+                      >
+                        {" "}
+                        066 222 333
+                      </Typography>
+                    </Box>
+                  </Box>
+                  <Box sx={{ mb: "1.5rem" }}>
+                    <Typography
+                      sx={{
+                        fontWeight: 500,
+                        textAlign: "center",
+                      }}
+                    >
+                      Lokacija:
+                    </Typography>
+                    <Box
+                      sx={{
+                        display: "flex",
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          pl: 1,
+                        }}
+                      >
+                        Grad, ulica, 33
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
         </Box>
       </Box>
     </Container>

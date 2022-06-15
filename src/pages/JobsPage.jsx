@@ -59,9 +59,7 @@ const JobsPage = () => {
               alignItems: "center",
               mr: 5,
             }}
-          >
-         
-          </Box>
+          ></Box>
         </Box>
         {/* Prikaz svih kompanija */}
         <Box
@@ -72,7 +70,7 @@ const JobsPage = () => {
           }}
         >
           <Grid container spacing={2} sx={{ justifyContent: "space-evenly" }}>
-          <Grid item xs={5}>
+            <Grid item xs={5}>
               <Card
                 sx={{
                   height: "100%",
@@ -99,7 +97,6 @@ const JobsPage = () => {
                   <Box
                     component="img"
                     sx={{
-                      
                       width: "80%",
                       height: "80%",
                       backgroundRepeat: "no-repeat",
@@ -222,7 +219,6 @@ const JobsPage = () => {
                   <Box
                     component="img"
                     sx={{
-                      
                       width: "80%",
                       height: "80%",
                       backgroundRepeat: "no-repeat",
@@ -318,8 +314,6 @@ const JobsPage = () => {
                 </Box>
               </Card>
             </Grid>
-            
-            
           </Grid>
         </Box>
       </Container>
