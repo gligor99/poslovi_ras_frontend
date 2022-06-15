@@ -177,12 +177,13 @@ const ProfilePage = () => {
           mt: 1,
         }}
       >
+        {/* Oglas */}
         <Box
           sx={{
             height: "90%",
             width: "90%",
             display: "flex",
-            flexDirection: "row",
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
             backgroundColor: "white",
@@ -191,7 +192,6 @@ const ProfilePage = () => {
             mb: 3,
           }}
         >
-          {/* Oglas */}
           <Box
             sx={{
               width: "100%",
