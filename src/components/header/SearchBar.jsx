@@ -23,9 +23,9 @@ const SearchBar = () => {
         justifyContent: "center",
         alignItems: "center",
         width: "50%",
-        height: "100px",
+        height: "80px",
         borderRadius: 5,
-        bgcolor: "#f4f4f4",
+        bgcolor: "white",
         boxShadow: 1,
       }}
     >
@@ -33,7 +33,7 @@ const SearchBar = () => {
         sx={{
           width: "100%",
           display: "flex",
-          justifyContent: "space-evenly",
+          justifyContent: "space-around",
         }}
       >
         <TextField
@@ -44,21 +44,8 @@ const SearchBar = () => {
           variant="outlined"
         />
         <FormControl sx={{ minWidth: 130 }}>
-          <InputLabel error id="demo-simple-select-autowidth-label">
-            Kategorija
-          </InputLabel>
-          <Select
-            error
-            labelId="demo-simple-select-autowidth-label"
-            id="demo-simple-select-autowidth"
-            value={age}
-            onChange={handleChange}
-            autoWidth
-            label="Kategorija"
-          >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
+          <InputLabel error>Kategorija</InputLabel>
+          <Select error value={age} onChange={handleChange} label="Kategorija">
             <MenuItem value={10}>Twenty</MenuItem>
             <MenuItem value={21}>Twenty one</MenuItem>
             <MenuItem value={22}>Twenty one and a half</MenuItem>

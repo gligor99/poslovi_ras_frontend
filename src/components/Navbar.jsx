@@ -9,7 +9,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 //Router
 import { NavLink } from "react-router-dom";
@@ -142,15 +141,15 @@ const ResponsiveAppBar = () => {
           </Box>
 
           {/* Button za dodavanje novog oglasa */}
-          <Box sx={{ flexGrow: 0 }}>
-            <Button variant="outlined" color="primary" sx={{ marginRight: 2 }}>
+          <Box>
+            <Button variant="contained" color="primary" sx={{ marginRight: 2 }}>
               Dodaj posao
             </Button>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar />
-              </IconButton>
-            </Tooltip>
+
+            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <Avatar />
+            </IconButton>
+
             <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"
@@ -167,11 +166,36 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseUserMenu}>
+                <Typography textAlign="center">
+                  <NavLink
+                    style={{
+                      color: "black",
+                      textDecoration: "none",
+                      textTransform: "uppercase",
+                      fontWeight: "500",
+                      fontSize: "0.9rem",
+                    }}
+                    to="profile"
+                  >
+                    Profil
+                  </NavLink>
+                </Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseUserMenu}>
+                <Typography
+                  textAlign="center"
+                  sx={{
+                    color: "black",
+                    textDecoration: "none",
+                    textTransform: "uppercase",
+                    fontWeight: "500",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  Izloguj se
+                </Typography>
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>
