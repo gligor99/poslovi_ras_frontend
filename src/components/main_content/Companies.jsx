@@ -24,7 +24,6 @@ const Companies = () => {
           height: "100%",
           mb: 2,
           backgroundColor: "white",
-          boxShadow: 1,
           borderRadius: "10px",
         }}
       >
@@ -32,7 +31,7 @@ const Companies = () => {
           sx={{
             textAlign: "center",
             textTransform: "uppercase",
-            fontWeight: "bold",
+            fontWeight: "400",
             color: "black",
             fontSize: "1.2rem",
             pt: 1,
@@ -54,7 +53,7 @@ const Companies = () => {
           sx={{
             boxShadow: 1,
             borderRadius: "10px",
-            mb: 3,
+            mb: 2,
             height: "120px",
             width: "100%",
             display: "flex",
@@ -138,7 +137,7 @@ const Companies = () => {
           sx={{
             boxShadow: 1,
             borderRadius: "10px",
-            mb: 3,
+            mb: 2,
             height: "120px",
             width: "100%",
             display: "flex",
@@ -225,13 +224,11 @@ const Companies = () => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "flex-end",
-            mt: 2,
           }}
         >
           <Box
             sx={{
               width: "35%",
-              mb: 2,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",

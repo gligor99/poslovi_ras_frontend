@@ -25,7 +25,6 @@ const Jobs = () => {
             height: "100%",
             mb: 2,
             backgroundColor: "white",
-            boxShadow: 1,
             borderRadius: "10px",
           }}
         >
@@ -33,7 +32,7 @@ const Jobs = () => {
             sx={{
               textAlign: "center",
               textTransform: "uppercase",
-              fontWeight: "bold",
+              fontWeight: "400",
               color: "black",
               fontSize: "1.2rem",
               pt: 1,
@@ -190,7 +189,7 @@ const Jobs = () => {
             alignItems: "center",
             pl: "3px",
             pr: "3px",
-            mb: 2,
+            mb: 1,
             borderRadius: "5px",
           }}
         >
