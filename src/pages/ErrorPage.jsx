@@ -3,6 +3,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import Alert from "@mui/material/Alert";
 //Icons
 import ErrorIcon from "@mui/icons-material/Error";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -34,16 +35,16 @@ const ErrorPage = () => {
             variant="contained"
             onClick={() => navigate(-1)}
             sx={{
-              width: "120px",
+              width: "140px",
               height: "100%",
-              bgcolor: "#f4f4f4",
+              bgcolor: "primary.main",
               padding: "6px 0px 6px 0px",
               display: "flex",
               flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
               "&:hover": {
-                bgcolor: "#f4f4f4 ",
+                bgcolor: "primary.main",
                 filter: "brightness(90%)",
               },
             }}
@@ -52,7 +53,7 @@ const ErrorPage = () => {
               sx={{
                 fontSize: "2rem",
                 width: "30%",
-                color: "black",
+                color: "white",
               }}
             />
             <Typography
@@ -61,7 +62,7 @@ const ErrorPage = () => {
                 width: "65%",
                 height: "100%",
                 textTransform: "Capitalize",
-                color: "black",
+                color: "white",
               }}
             >
               Nazad
@@ -73,38 +74,56 @@ const ErrorPage = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-evenly",
+            justifyContent: "center",
             alignItems: "center",
             height: "50%",
             width: "70%",
-            bgcolor: "#f4f4f4",
-            boxShadow: 3,
+            backgroundColor: "background.main",
           }}
         >
-          <Box>
-            <ErrorIcon
-              sx={{
-                color: "red",
-                fontSize: "5rem",
-              }}
-            />
-            <Typography variant="h4">Error!</Typography>
-          </Box>
-
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              alignContent: "center",
-              width: "80%",
+              alignItems: "center",
+              height: "90%",
+              width: "95%",
+              bgcolor: "white",
+              boxShadow: 1,
             }}
           >
-            <Typography variant="h6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-              ducimus obcaecati! Officiis ab fugit nisi.Lorem ipsum dolor sit
-              amet consectetur adipisicing. Lorem, ipsum dolor.
-            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <ErrorIcon
+                sx={{
+                  color: "red",
+                  fontSize: "5rem",
+                }}
+              />
+              <Typography variant="h4">Greška 404!</Typography>
+            </Box>
+
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignContent: "center",
+                width: "70%",
+                mt: 2,
+              }}
+            >
+              <Alert variant="filled" severity="error">
+                Greška 404, stranica nije pronađena!
+              </Alert>
+            </Box>
           </Box>
         </Box>
       </Container>
