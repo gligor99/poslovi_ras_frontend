@@ -13,7 +13,7 @@ const Footer = () => {
     <>
       <Box
         sx={{
-          bgcolor: "background.main",
+          bgcolor: "secondary.main",
           height: "100px",
           width: "100%",
           position: "sticky",
@@ -35,8 +35,8 @@ const Footer = () => {
           <NavLink
             style={{
               textDecoration: "none",
-              color: "#f05454",
-              mr: 1,
+              color: "primary.main",
+              marginRight: "1rem",
             }}
             to="/about"
             element={<AboutPage />}
@@ -46,7 +46,7 @@ const Footer = () => {
               sx={{
                 fontSize: "1rem",
                 fontWeight: "500",
-                mr: 2,
+                color: "primary.main",
               }}
               style={{ display: "inline" }}
             >
@@ -56,7 +56,9 @@ const Footer = () => {
           <NavLink
             style={{
               textDecoration: "none",
-              color: "#f05454",
+              color: "primary.main",
+              width: "3rem",
+              marginRight: "3rem",
             }}
             to="/contact"
             element={<AboutPage />}
@@ -66,7 +68,7 @@ const Footer = () => {
               sx={{
                 fontSize: "1rem",
                 fontWeight: "500",
-                mr: 5,
+                color: "primary.main",
               }}
             >
               {" "}
@@ -83,7 +85,9 @@ const Footer = () => {
               to="/contact"
               element={<ContactPage />}
             >
-              <FacebookIcon sx={{ mr: 1, height: "100%", color: "#0011ff" }} />
+              <FacebookIcon
+                sx={{ marginRight: "1rem", height: "100%", color: "#1363DF" }}
+              />
             </NavLink>
 
             <NavLink
@@ -95,22 +99,23 @@ const Footer = () => {
               to="/about"
               element={<AboutPage />}
             >
-              <InstagramIcon sx={{ height: "100%", color: "#c21515" }} />
+              <InstagramIcon sx={{ height: "100%", color: "primary.main" }} />
             </NavLink>
           </Box>
           {/* fb % insta  */}
         </Box>
-        {/* copyright */}
+        {/* footer */}
 
         <Box sx={{ mb: 1 }}>
           <Typography
             variant="p"
             sx={{
               fontFamily: "Roboto",
+              color: "white",
             }}
           >
             {" "}
-            Copyright © Razvoj aplikativnog softvera{" "}
+            Poslovi Bijeljina - 2022. - Projekat za predmet RAS
           </Typography>
         </Box>
       </Box>
