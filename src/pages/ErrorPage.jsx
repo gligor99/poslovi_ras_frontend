@@ -21,14 +21,14 @@ const ErrorPage = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          height: 900,
+          height: 700,
         }}
       >
         <Box
           sx={{
             height: "50px",
             width: "100%",
-            mb: 20,
+            mb: 10,
           }}
         >
           <Button
