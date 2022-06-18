@@ -10,6 +10,9 @@ import TextareaAutosize from "@mui/material/TextareaAutosize";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Input from "@mui/material/Input";
 
 //Icons
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -65,27 +68,81 @@ const ContactPage = () => {
           }}
         >
           {/* Lijeva strana stranice */}
+          <Box
+            sx={{
+              width: "35%",
+              height: "100%",
+            }}
+          >
+            <form id="form" ref={formRef} onSubmit={sendEmail}>
+              <Box
+                className="field"
+                style={{
+                  height: "100px",
+                }}
+              >
+                <InputLabel htmlFor="to_name">to_name</InputLabel>
+                <Input
+                  sx={{
+                    width: "100%",
+                  }}
+                  type="text"
+                  name="to_name"
+                  id="to_name"
+                />
+              </Box>
+              <Box
+                className="field"
+                style={{
+                  height: "100px",
+                }}
+              >
+                <InputLabel htmlFor="from_name">from_name</InputLabel>
+                <Input
+                  sx={{
+                    width: "100%",
+                  }}
+                  type="text"
+                  name="from_name"
+                  id="from_name"
+                />
+              </Box>
+              <Box
+                className="field"
+                style={{
+                  height: "100px",
+                }}
+              >
+                <InputLabel htmlFor="message">message</InputLabel>
+                <Input
+                  sx={{
+                    width: "100%",
+                  }}
+                  type="text"
+                  name="message"
+                  id="message"
+                />
+              </Box>
+              <Box
+                className="field"
+                style={{
+                  height: "100px",
+                }}
+              >
+                <InputLabel htmlFor="reply_to">reply_to</InputLabel>
+                <Input
+                  sx={{
+                    width: "100%",
+                  }}
+                  type="text"
+                  name="reply_to"
+                  id="reply_to"
+                />
+              </Box>
 
-          <form id="form" ref={formRef} onSubmit={sendEmail}>
-            <div className="field">
-              <label for="to_name">to_name</label>
-              <input type="text" name="to_name" id="to_name" />
-            </div>
-            <div className="field">
-              <label for="from_name">from_name</label>
-              <input type="text" name="from_name" id="from_name" />
-            </div>
-            <div className="field">
-              <label for="message">message</label>
-              <input type="text" name="message" id="message" />
-            </div>
-            <div className="field">
-              <label for="reply_to">reply_to</label>
-              <input type="text" name="reply_to" id="reply_to" />
-            </div>
-
-            <input type="submit" id="button" value="Send Email" />
-          </form>
+              <Input type="submit" id="button" value="Send Email" />
+            </form>
+          </Box>
 
           {/* Desna strana stranice */}
           <Card
