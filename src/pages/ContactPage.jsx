@@ -1,3 +1,6 @@
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 //MUI
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -7,13 +10,38 @@ import TextareaAutosize from "@mui/material/TextareaAutosize";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+
 //Icons
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+
 //Components
 import { Breadcrumb } from "./../components/index";
+
 const ContactPage = () => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_xkqfaaa",
+        "template_zhdc4ac",
+        formRef.current,
+        "WGj2haahEPOxhXSCn"
+      )
+      .then(
+        (result) => {
+          alert(result.text);
+        },
+        (error) => {
+          alert(error);
+        }
+      );
+  };
+
   return (
     <>
       <Breadcrumb />
@@ -37,79 +65,27 @@ const ContactPage = () => {
           }}
         >
           {/* Lijeva strana stranice */}
-          <Box
-            component="form"
-            sx={{
-              "& .MuiTextField-root": { m: 1 },
-              display: "flex",
-              flexDirection: "column",
-              backgroundColor: "white",
-            }}
-            style={{ width: "40vw" }}
-            noValidate
-            autoComplete="off"
-          >
-            <Typography
-              textAlign="center"
-              variant="h4"
-              sx={{ pb: "25px", marginLeft: "10px" }}
-              style={{ width: "90%" }}
-            >
-              Kontaktirajte nas
-            </Typography>
-            <TextField
-              required
-              id="outlined-required"
-              label="Ime"
-              style={{ width: "90%" }}
-            />
-            <TextField
-              required
-              id="outlined-password-input"
-              label="Email"
-              type="email"
-              autoComplete="current-password"
-              style={{ width: "90%" }}
-            />
-            <TextField
-              required
-              id="outlined-password-input"
-              label="Broj telefona"
-              type="number"
-              autoComplete="current-password"
-              style={{ width: "90%" }}
-            />
 
-            <TextareaAutosize
-              minRows={5}
-              placeholder="Unesite poruku"
-              style={{
-                width: "70%",
-                padding: "10px",
-                margin: "10px 0 10px 11px",
-                resize: "none",
-                border: "1px solid lightgray",
-                borderRadius: 3,
-                outline: "1px solid gray",
-                fontSize: "14px",
-              }}
-            />
+          <form id="form" ref={formRef} onSubmit={sendEmail}>
+            <div className="field">
+              <label for="to_name">to_name</label>
+              <input type="text" name="to_name" id="to_name" />
+            </div>
+            <div className="field">
+              <label for="from_name">from_name</label>
+              <input type="text" name="from_name" id="from_name" />
+            </div>
+            <div className="field">
+              <label for="message">message</label>
+              <input type="text" name="message" id="message" />
+            </div>
+            <div className="field">
+              <label for="reply_to">reply_to</label>
+              <input type="text" name="reply_to" id="reply_to" />
+            </div>
 
-            <Button
-              variant="contained"
-              sx={{
-                width: "20%",
-                margin: "5px 0px 0px 10px",
-                backgroundColor: "primary.main",
-                "&:hover": {
-                  backgroundColor: "tomato",
-                  filter: "brightness(90%)",
-                },
-              }}
-            >
-              Pošalji
-            </Button>
-          </Box>
+            <input type="submit" id="button" value="Send Email" />
+          </form>
 
           {/* Desna strana stranice */}
           <Card
