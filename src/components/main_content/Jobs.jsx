@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 
 //test img
 import logo from "./../../assets/img/test.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { PostContext } from "../../context/postContext";
 const Jobs = () => {
@@ -181,7 +181,13 @@ const Jobs = () => {
                         },
                       }}
                     >
-                      Detalji
+                      <Link
+                        style={{ textDecoration: "none", color: "#fff" }}
+                        to={`/jobs/${id}`}
+                      >
+                        {" "}
+                        Detalji{" "}
+                      </Link>
                     </Button>
                   </Box>
                 </Box>

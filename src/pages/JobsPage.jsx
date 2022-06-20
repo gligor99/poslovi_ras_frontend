@@ -1,4 +1,4 @@
-import { Breadcrumb } from "./../components/index";
+import { Breadcrumb, Footer } from "./../components/index";
 import { useContext } from "react";
 import { PostContext } from "../context/postContext";
 //MUI
@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const JobsPage = () => {
   const { allPosts } = useContext(PostContext);
@@ -191,7 +192,14 @@ const JobsPage = () => {
                             },
                           }}
                         >
-                          Detalji
+                          {" "}
+                          <Link
+                            style={{ textDecoration: "none", color: "#fff" }}
+                            to={`/jobs/${id}`}
+                          >
+                            {" "}
+                            Detalji{" "}
+                          </Link>
                         </Button>
                       </Box>
                     </Box>

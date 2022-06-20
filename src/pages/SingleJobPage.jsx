@@ -10,8 +10,29 @@ import { Breadcrumb } from "./../components/index";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import logo from "../assets/img/logo.png";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const SingleJobPage = () => {
+  const [jobData, setJobData] = useState();
+  const { jobID } = useParams();
+
+  console.table(jobData);
+
+  const getJob = async () => {
+    try {
+      const response = await fetch(
+        `http://ras_poslovi_backend.test/app/post/${jobID}`
+      );
+      const result = await response.json();
+      setJobData(result);
+    } catch (error) {}
+  };
+
+  useEffect(() => {
+    getJob();
+  }, [jobID]);
+
   return (
     <>
       <Breadcrumb />
@@ -52,14 +73,16 @@ const SingleJobPage = () => {
           >
             <Card
               sx={{
+                display: "flex",
+                alignItems: "center",
                 width: "70%",
-                borderRadius: "10px",
+                height: "70%",
               }}
             >
               <CardMedia
+                style={{ padding: 10 }}
                 component="img"
-                height="300px"
-                image={logo}
+                image={jobData?.item?.user.images[0]}
                 alt="green iguana"
               />
             </Card>
@@ -84,6 +107,7 @@ const SingleJobPage = () => {
                 flexDirection: "column",
                 alignItems: "center",
                 boxShadow: 1,
+                borderRadius: "3.5px",
               }}
             >
               <Typography
@@ -95,8 +119,7 @@ const SingleJobPage = () => {
                   mb: "1.5rem",
                 }}
               >
-                {" "}
-                Naziv oglasa asdwqew wqdwqdwq{" "}
+                {jobData?.item?.title}
               </Typography>
               <Box
                 sx={{
@@ -106,76 +129,7 @@ const SingleJobPage = () => {
               >
                 <Box sx={{ mb: "0.5rem" }}>
                   <Typography sx={{ fontWeight: 500 }}>Opis posla:</Typography>
-                  <Typography>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Deleniti ratione similique itaque dolor dolore placeat
-                    molestiae quos neque. Ex recusandae accusantium libero rem
-                    corrupti excepturi magnam illum temporibus tempore
-                    doloremque!
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    mb: "0.5rem",
-                    display: "flex",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontWeight: 500,
-                      pr: 1,
-                    }}
-                  >
-                    Plata:{" "}
-                  </Typography>
-                  <Typography> 321km</Typography>
-                </Box>
-                <Box sx={{ mb: "0.5rem" }}>
-                  <Typography
-                    sx={{
-                      fontWeight: 500,
-                    }}
-                  >
-                    Kontakt:
-                  </Typography>
-                  <Box
-                    sx={{
-                      display: "flex",
-                    }}
-                  >
-                    <PhoneIcon />
-                    <Typography
-                      sx={{
-                        pl: 1,
-                      }}
-                    >
-                      {" "}
-                      066 222 333
-                    </Typography>
-                  </Box>
-                </Box>
-                <Box sx={{ mb: "1.5rem" }}>
-                  <Typography
-                    sx={{
-                      fontWeight: 500,
-                    }}
-                  >
-                    Lokacija:
-                  </Typography>
-                  <Box
-                    sx={{
-                      display: "flex",
-                    }}
-                  >
-                    <LocationOnIcon />
-                    <Typography
-                      sx={{
-                        pl: 1,
-                      }}
-                    >
-                      Grad, ulica, 33
-                    </Typography>
-                  </Box>
+                  <Typography>{jobData?.item?.content}</Typography>
                 </Box>
               </Box>
             </Box>

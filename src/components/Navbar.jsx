@@ -148,17 +148,11 @@ const ResponsiveAppBar = () => {
           </Box>
 
           {/* Button za dodavanje novog oglasa */}
-          <Box>
+          <Box
+            style={{ width: "140px", display: "flex", justifyContent: "end" }}
+          >
             {user ? (
               <>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  sx={{ marginRight: 2 }}
-                >
-                  Dodaj posao
-                </Button>
-
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar />
                 </IconButton>
