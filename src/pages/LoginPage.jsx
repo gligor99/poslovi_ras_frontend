@@ -1,17 +1,46 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 //MUI
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-// import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 //icons
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import axios from "axios";
+
 const LoginPage = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [msg, setMsg] = useState("");
+
+  let navigate = useNavigate();
+
+  const login = async (e) => {
+    e.preventDefault();
+    try {
+      await axios
+        .post("http://ras_poslovi_backend.test/app/login_check", {
+          username: username,
+          password: password,
+        })
+        .then((response) => {
+          navigate("/profile");
+        });
+    } catch (error) {
+      if (error.response) {
+        setMsg("Lozinka ili email nisu ispravni!");
+        setTimeout(() => {
+          setMsg("");
+        }, "2000");
+      }
+    }
+  };
+
   return (
     <Container
       component="main"
@@ -57,42 +86,43 @@ const LoginPage = () => {
           <Typography component="h1" variant="h5">
             Prijavite se
           </Typography>
-          <Box component="form" noValidate sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email adresa"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Lozinka"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Prijava
-            </Button>
+          <Box noValidate sx={{ mt: 1 }}>
+            <form onSubmit={login}>
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                label="Email adresa"
+                name="email"
+                autoComplete="email"
+                autoFocus
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Lozinka"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <Typography> {msg} </Typography>
+              <Button
+                onSubmit={(e) => login()}
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Prijava
+              </Button>
+            </form>
             <Grid container>
-              <Grid item xs>
-                {/* <Link  variant="body2">
-                  Zaboravili ste lozinku?
-                </Link> */}
-              </Grid>
+              <Grid item xs></Grid>
               <Grid item>
                 <Box
                   sx={{

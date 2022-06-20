@@ -81,7 +81,7 @@ const ContactPage = () => {
                   height: "100px",
                 }}
               >
-                <InputLabel htmlFor="to_name">to_name</InputLabel>
+                <InputLabel htmlFor="to_name">Ime</InputLabel>
                 <Input
                   sx={{
                     width: "100%",
@@ -97,7 +97,7 @@ const ContactPage = () => {
                   height: "100px",
                 }}
               >
-                <InputLabel htmlFor="from_name">from_name</InputLabel>
+                <InputLabel htmlFor="from_name">Email</InputLabel>
                 <Input
                   sx={{
                     width: "100%",
@@ -113,7 +113,7 @@ const ContactPage = () => {
                   height: "100px",
                 }}
               >
-                <InputLabel htmlFor="message">message</InputLabel>
+                <InputLabel htmlFor="message">Poruka</InputLabel>
                 <Input
                   sx={{
                     width: "100%",
@@ -129,8 +129,11 @@ const ContactPage = () => {
                   height: "100px",
                 }}
               >
-                <InputLabel htmlFor="reply_to">reply_to</InputLabel>
+                <InputLabel style={{ visibility: "hidden" }} htmlFor="reply_to">
+                  reply_to
+                </InputLabel>
                 <Input
+                  style={{ visibility: "hidden" }}
                   sx={{
                     width: "100%",
                   }}
@@ -140,7 +143,9 @@ const ContactPage = () => {
                 />
               </Box>
 
-              <Input type="submit" id="button" value="Send Email" />
+              <Button variant="contained" type="submit" id="button">
+                Posalji
+              </Button>
             </form>
           </Box>
 

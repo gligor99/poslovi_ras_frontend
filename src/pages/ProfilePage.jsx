@@ -3,6 +3,7 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import Alert from "@mui/material/Alert";
 //icons
 import AddIcon from "@mui/icons-material/Add";
 
@@ -51,7 +52,7 @@ const ProfilePage = () => {
             >
               <Typography
                 variant="h6"
-                align="center "
+                align="center"
                 sx={{
                   fontFamily: "Roboto",
                   mt: 3,

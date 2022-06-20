@@ -43,14 +43,7 @@ const SearchBar = () => {
           label="Naziv"
           variant="outlined"
         />
-        <FormControl sx={{ minWidth: 130 }}>
-          <InputLabel error>Kategorija</InputLabel>
-          <Select error value={age} onChange={handleChange} label="Kategorija">
-            <MenuItem value={10}>Twenty</MenuItem>
-            <MenuItem value={21}>Twenty one</MenuItem>
-            <MenuItem value={22}>Twenty one and a half</MenuItem>
-          </Select>
-        </FormControl>
+
         <Box
           sx={{
             display: "flex",
