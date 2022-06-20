@@ -6,7 +6,13 @@ import Typography from "@mui/material/Typography";
 
 //test img
 import logo from "./../../assets/img/test.png";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { PostContext } from "../../context/postContext";
 const Jobs = () => {
+  const navigate = useNavigate();
+  const { allPosts } = useContext(PostContext);
+
   return (
     <>
       <Box
@@ -44,274 +50,145 @@ const Jobs = () => {
         </Box>
 
         {/* Oglasi */}
-        <Box
-          sx={{
-            width: "100%",
-            height: "250px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            pl: "3px",
-            pr: "3px",
-            mb: 2,
-            borderRadius: "5px",
-          }}
-        >
-          <Card
-            sx={{
-              height: "100%",
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "flex-start",
-              bgcolor: "white",
-              pr: "5px",
-              boxShadow: 1,
-            }}
-          >
+        {allPosts.data?.map((item) => {
+          const { id, title, content, user } = item;
+          return (
             <Box
+              key={id}
               sx={{
-                height: "100%",
-                width: "30%",
+                width: "100%",
+                height: "250px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
+                pl: "3px",
+                pr: "3px",
+                mb: 2,
+                borderRadius: "5px",
               }}
             >
-              <Box
-                component="img"
+              <Card
                 sx={{
-                  height: "min-content",
-                  width: "80%",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                }}
-                src={logo}
-              ></Box>
-            </Box>
-
-            <Box
-              sx={{
-                height: "100%",
-                width: "50%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                pl: "10px",
-                pr: "5px",
-              }}
-            >
-              <Box
-                sx={{
-                  height: "80%",
+                  height: "100%",
                   width: "100%",
-                }}
-              >
-                <Typography
-                  variant="h6"
-                  sx={{
-                    height: "20%",
-                    width: "100%",
-                    fontSize: "1rem",
-                    fontFamily: "Roboto",
-                    color: "black",
-                    textAlign: "center",
-                  }}
-                >
-                  D.O.O Naziv firme dwqdw
-                </Typography>
-                <Typography
-                  variant="p"
-                  sx={{
-                    height: "80%",
-                    width: "100%",
-                    fontFamily: "Roboto",
-                  }}
-                >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                  magni officiis tempora laborum similique deleniti provident
-                  distinctio minus nemo rerum?
-                </Typography>
-              </Box>
-            </Box>
-            <Box
-              sx={{
-                height: "100%",
-                width: "20%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Box
-                sx={{
-                  height: "80%",
-                  width: "95%",
                   display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-end",
+                  flexDirection: "row",
                   alignItems: "center",
+                  justifyContent: "flex-start",
+                  bgcolor: "white",
+                  pr: "5px",
+                  boxShadow: 1,
                 }}
               >
-                <Button
-                  size="small"
+                <Box
                   sx={{
-                    color: "white",
-                    backgroundColor: "primary.main",
-                    width: "80%",
-                    height: "15%",
-                    "&:hover": {
-                      color: "white",
-                      backgroundColor: "primary.main",
-                      filter: "brightness(70%)",
-                    },
+                    height: "100%",
+                    width: "30%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
                   }}
                 >
-                  Detalji
-                </Button>
-              </Box>
-            </Box>
-          </Card>
-        </Box>
-        <Box
-          sx={{
-            width: "100%",
-            height: "250px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            pl: "3px",
-            pr: "3px",
-            mb: 1,
-            borderRadius: "5px",
-          }}
-        >
-          <Card
-            sx={{
-              height: "100%",
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "flex-start",
-              bgcolor: "white",
-              pr: "5px",
-              boxShadow: 1,
-            }}
-          >
-            <Box
-              sx={{
-                height: "100%",
-                width: "30%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Box
-                component="img"
-                sx={{
-                  height: "min-content",
-                  width: "80%",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                }}
-                src={logo}
-              ></Box>
-            </Box>
+                  <Box
+                    component="img"
+                    sx={{
+                      height: "min-content",
+                      width: "80%",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      backgroundSize: "cover",
+                    }}
+                    src={user?.images[0]}
+                  ></Box>
+                </Box>
 
-            <Box
-              sx={{
-                height: "100%",
-                width: "50%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Box
-                sx={{
-                  height: "80%",
-                  width: "100%",
-                }}
-              >
-                <Typography
-                  variant="h6"
+                <Box
                   sx={{
-                    height: "20%",
-                    width: "100%",
-                    fontSize: "1rem",
-                    fontFamily: "Roboto",
-                    color: "black",
-                    textAlign: "center",
+                    height: "100%",
+                    width: "50%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    pl: "10px",
+                    pr: "5px",
                   }}
                 >
-                  D.O.O Naziv firme dwqdw
-                </Typography>
-                <Typography
-                  variant="p"
+                  <Box
+                    sx={{
+                      height: "80%",
+                      width: "100%",
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        height: "20%",
+                        width: "100%",
+                        fontSize: "1rem",
+                        fontFamily: "Roboto",
+                        color: "black",
+                        textAlign: "center",
+                      }}
+                    >
+                      {title}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        height: "80%",
+                        width: "100%",
+                        fontFamily: "Roboto",
+                      }}
+                    >
+                      {content.substring(0, 100)} ...
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box
                   sx={{
-                    height: "80%",
-                    width: "100%",
-                    fontFamily: "Roboto",
+                    height: "100%",
+                    width: "20%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
                   }}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                  magni officiis tempora laborum similique deleniti provident
-                  distinctio minus nemo rerum?
-                </Typography>
-              </Box>
+                  <Box
+                    sx={{
+                      height: "80%",
+                      width: "95%",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "flex-end",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Button
+                      size="small"
+                      sx={{
+                        color: "white",
+                        backgroundColor: "primary.main",
+                        width: "80%",
+                        height: "15%",
+                        "&:hover": {
+                          color: "white",
+                          backgroundColor: "primary.main",
+                          filter: "brightness(70%)",
+                        },
+                      }}
+                    >
+                      Detalji
+                    </Button>
+                  </Box>
+                </Box>
+              </Card>
             </Box>
-            <Box
-              sx={{
-                height: "100%",
-                width: "20%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Box
-                sx={{
-                  height: "80%",
-                  width: "95%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-end",
-                  alignItems: "center",
-                }}
-              >
-                <Button
-                  size="small"
-                  sx={{
-                    color: "white",
-                    backgroundColor: "primary.main",
-                    width: "80%",
-                    height: "15%",
-                    "&:hover": {
-                      color: "white",
-                      backgroundColor: "primary.main",
-                      filter: "brightness(70%)",
-                    },
-                  }}
-                >
-                  Detalji
-                </Button>
-              </Box>
-            </Box>
-          </Card>
-        </Box>
+          );
+        })}
 
         {/* Dugme za prikaz svih oglasa */}
         <Box
@@ -348,6 +225,7 @@ const Jobs = () => {
                   filter: "brightness(70%)",
                 },
               }}
+              onClick={() => navigate("/jobs")}
             >
               Prikaži sve
             </Button>

@@ -19,7 +19,7 @@ import "./index.css";
 import { AuthContext } from "./auth/context";
 
 function App() {
-  const { user, setUser } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   return (
     <Routes>
