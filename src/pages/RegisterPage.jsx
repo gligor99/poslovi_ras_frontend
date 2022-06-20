@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
-
+//react
+import { useState } from "react";
+//router
+import { Link, useNavigate } from "react-router-dom";
 //MUI
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -16,8 +18,46 @@ import PhotoCamera from "@mui/icons-material/PhotoCamera";
 import Stack from "@mui/material/Stack";
 //icons
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
+//forms
+import axios from "axios";
 
 const RegisterPage = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+
+  let navigate = useNavigate();
+  // console.log(formData);
+
+  let formData = new FormData();
+  formData.set("name", "Pass");
+  formData.append("password", "123456");
+  formData.append("email", "pass@gmail.com");
+  formData.append("description", "Radi valjda sad");
+  formData.append("roles", {});
+
+  const register = async (e) => {
+    e.preventDefault();
+    await axios({
+      method: "post",
+      url: "http://ras_poslovi_backend.test/app/user",
+      data: formData,
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        //handle success
+        console.log(response);
+      })
+      .catch(function (response) {
+        //handle error
+        console.log(response);
+      });
+  };
+
   return (
     <Container
       component="main"
@@ -63,137 +103,149 @@ const RegisterPage = () => {
           <Typography component="h1" variant="h5">
             Registracija
           </Typography>
-          <Box component="form" noValidate sx={{ mt: 3 }}>
-            <Grid container spacing={2}>
-              <Grid item xs={12}>
-                <TextField
-                  autoComplete="given-name"
-                  name="companyName"
-                  required
-                  fullWidth
-                  id="companyName"
-                  label="Naziv kompanije"
-                  autoFocus
-                />
-              </Grid>
+          <Box noValidate sx={{ mt: 3 }}>
+            <form onSubmit={register}>
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <TextField
+                    autoComplete="given-name"
+                    name="companyName"
+                    required
+                    fullWidth
+                    id="companyName"
+                    label="Naziv kompanije"
+                    autoFocus
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </Grid>
 
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="email"
-                  label="Email adresa"
-                  name="email"
-                  autoComplete="email"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="password"
-                  label="Lozinka"
-                  type="password"
-                  id="password"
-                  autoComplete="new-password"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextareaAutosize
-                  aria-label="about company"
-                  minRows={4}
-                  placeholder="Dodajte opis (opcionalno)"
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email adresa"
+                    name="email"
+                    autoComplete="email"
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    name="password"
+                    label="Lozinka"
+                    type="password"
+                    id="password"
+                    autoComplete="new-password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextareaAutosize
+                    aria-label="about company"
+                    minRows={4}
+                    onChange={(e) => setDescription(e.target.value)}
+                    placeholder="Dodajte opis (opcionalno)"
+                    style={{
+                      width: "70%",
+                      outline: "1px solid lightgray",
+                      fontSize: "0.8rem",
+                      padding: "10px",
+                    }}
+                  />
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
                   style={{
-                    width: "70%",
-                    outline: "1px solid lightgray",
-                    fontSize: "0.8rem",
-                    padding: "10px",
-                  }}
-                />
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                style={{
-                  paddingTop: "0.3rem",
-                  paddingBottom: "0.3rem",
-                }}
-              >
-                <Stack
-                  direction="row"
-                  alignItems="center"
-                  sx={{
-                    height: "100%",
+                    paddingTop: "0.3rem",
+                    paddingBottom: "0.3rem",
                   }}
                 >
-                  <Typography
+                  <Stack
+                    direction="row"
+                    alignItems="center"
                     sx={{
-                      pr: 1,
+                      height: "100%",
                     }}
                   >
-                    {" "}
-                    Dodaj sliku
-                  </Typography>
-                  <label htmlFor="icon-button-file">
-                    <Input
+                    <Typography
                       sx={{
-                        display: "none",
-                      }}
-                      accept="image/*"
-                      id="icon-button-file"
-                      type="file"
-                    />
-                    <IconButton
-                      color="primary"
-                      aria-label="upload picture"
-                      component="span"
-                      sx={{
-                        margin: 0,
-                        padding: 0,
+                        pr: 1,
                       }}
                     >
-                      <PhotoCamera
+                      {" "}
+                      Dodaj sliku
+                    </Typography>
+                    <label htmlFor="icon-button-file">
+                      <Input
                         sx={{
-                          height: "30px",
-                          width: "30px",
+                          display: "none",
                         }}
+                        accept="image/*"
+                        id="icon-button-file"
+                        type="file"
                       />
-                    </IconButton>
-                  </label>
-                </Stack>
+                      <IconButton
+                        color="primary"
+                        aria-label="upload picture"
+                        component="span"
+                        sx={{
+                          margin: 0,
+                          padding: 0,
+                        }}
+                      >
+                        <PhotoCamera
+                          sx={{
+                            height: "30px",
+                            width: "30px",
+                          }}
+                        />
+                      </IconButton>
+                    </label>
+                  </Stack>
+                </Grid>
               </Grid>
-            </Grid>
-            <Button type="submit" fullWidth variant="contained" sx={{ mb: 2 }}>
-              Registruj se
-            </Button>
-            <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Box
-                  sx={{
-                    display: "flex",
-                  }}
-                >
-                  <Typography
+              <Button
+                type="submit"
+                onSubmit={(e) => register(e)}
+                fullWidth
+                variant="contained"
+                sx={{ mb: 2 }}
+              >
+                Registruj se
+              </Button>
+              <Grid container justifyContent="flex-end">
+                <Grid item>
+                  <Box
                     sx={{
-                      pr: 1,
+                      display: "flex",
                     }}
                   >
-                    {" "}
-                    Imate nalog?{" "}
-                  </Typography>
-                  <Link
-                    to="/login"
-                    variant="body2"
-                    style={{
-                      textDecoration: "none",
-                      color: "red",
-                    }}
-                  >
-                    Prijavite se.
-                  </Link>
-                </Box>
+                    <Typography
+                      sx={{
+                        pr: 1,
+                      }}
+                    >
+                      {" "}
+                      Imate nalog?{" "}
+                    </Typography>
+                    <Link
+                      to="/login"
+                      variant="body2"
+                      style={{
+                        textDecoration: "none",
+                        color: "red",
+                      }}
+                    >
+                      Prijavite se.
+                    </Link>
+                  </Box>
+                </Grid>
               </Grid>
-            </Grid>
+            </form>
           </Box>
         </Box>
       </Box>

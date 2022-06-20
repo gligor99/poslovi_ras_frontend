@@ -3,11 +3,15 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Alert from "@mui/material/Alert";
 //icons
 import AddIcon from "@mui/icons-material/Add";
+import { useContext } from "react";
+import { AuthContext } from "../auth/context";
 
 const ProfilePage = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user);
+
   return (
     <Container maxWidth="lg">
       <Box
@@ -58,7 +62,7 @@ const ProfilePage = () => {
                   mt: 3,
                 }}
               >
-                D.O.O firma firma
+                Firma
               </Typography>
               <Box
                 sx={{

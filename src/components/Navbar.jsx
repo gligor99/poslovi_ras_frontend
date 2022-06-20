@@ -11,11 +11,13 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 //Router
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 //Hooks
 import { useState } from "react";
 
 import logo from "../assets/img/logo-wbg (1).png";
+import { useContext } from "react";
+import { AuthContext } from "../auth/context";
 
 const pages = [
   { page: "Početna", path: "/" },
@@ -41,7 +43,8 @@ const settings = ["Profil", "Odjavi se"];
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-
+  const { user, setUser, setIsLoggedIn } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -57,6 +60,10 @@ const ResponsiveAppBar = () => {
     setAnchorElUser(null);
   };
 
+  const logout = () => {
+    setUser(null), setIsLoggedIn(false);
+    navigate("/");
+  };
   return (
     <AppBar
       position="relative"
@@ -142,13 +149,23 @@ const ResponsiveAppBar = () => {
 
           {/* Button za dodavanje novog oglasa */}
           <Box>
-            <Button variant="contained" color="primary" sx={{ marginRight: 2 }}>
-              Dodaj posao
-            </Button>
+            {user ? (
+              <>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  sx={{ marginRight: 2 }}
+                >
+                  Dodaj posao
+                </Button>
 
-            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar />
-            </IconButton>
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar />
+                </IconButton>
+              </>
+            ) : (
+              <Link to="/login">Login</Link>
+            )}
 
             <Menu
               sx={{ mt: "45px" }}
@@ -192,6 +209,7 @@ const ResponsiveAppBar = () => {
                     fontWeight: "500",
                     fontSize: "0.9rem",
                   }}
+                  onClick={() => logout()}
                 >
                   Izloguj se
                 </Typography>

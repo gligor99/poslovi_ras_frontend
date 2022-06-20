@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 //MUI
 import Avatar from "@mui/material/Avatar";
@@ -12,12 +12,14 @@ import Container from "@mui/material/Container";
 //icons
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import axios from "axios";
+import jwtDecode from "jwt-decode";
+import { AuthContext } from "../auth/context";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
-
+  const { user, setUser, isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
   let navigate = useNavigate();
 
   const login = async (e) => {
@@ -29,6 +31,9 @@ const LoginPage = () => {
           password: password,
         })
         .then((response) => {
+          const user = jwtDecode(response.data.token);
+          setUser(user);
+          setIsLoggedIn(true);
           navigate("/profile");
         });
     } catch (error) {
@@ -110,7 +115,14 @@ const LoginPage = () => {
                 autoComplete="current-password"
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <Typography> {msg} </Typography>
+              <Typography
+                sx={{
+                  color: "red",
+                }}
+              >
+                {" "}
+                {msg}{" "}
+              </Typography>
               <Button
                 onSubmit={(e) => login()}
                 type="submit"

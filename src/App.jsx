@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import {
   AboutPage,
@@ -12,10 +13,14 @@ import {
   ProfilePage,
   SharedLayout,
   ErrorPage,
+  ProtectedRoute,
 } from "./pages/index";
 import "./index.css";
+import { AuthContext } from "./auth/context";
 
 function App() {
+  const { user, setUser } = useContext(AuthContext);
+
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
@@ -28,7 +33,14 @@ function App() {
         <Route path="contact" element={<ContactPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="register" element={<RegisterPage />} />
-        <Route path="profile" element={<ProfilePage />} />
+        <Route
+          path="profile"
+          element={
+            <ProtectedRoute user={user}>
+              <ProfilePage />
+            </ProtectedRoute>
+          }
+        />
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>

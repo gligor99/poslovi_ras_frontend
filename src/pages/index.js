@@ -10,6 +10,7 @@ import RegisterPage from "./RegisterPage";
 import ProfilePage from "./ProfilePage";
 import SharedLayout from "./SharedLayout";
 import ErrorPage from "./ErrorPage";
+import ProtectedRoute from "./ProtectedRoute";
 
 export {
   HomePage,
@@ -24,4 +25,5 @@ export {
   ProfilePage,
   SharedLayout,
   ErrorPage,
+  ProtectedRoute,
 };
