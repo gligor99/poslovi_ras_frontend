@@ -25,10 +25,10 @@ const pages = [
     page: "Poslovi",
     path: "/jobs",
   },
-  {
-    page: "Kompanije",
-    path: "/companies",
-  },
+  // {
+  //   page: "Kompanije",
+  //   path: "/companies",
+  // },
   {
     page: "O nama",
     path: "/about",
@@ -158,7 +158,30 @@ const ResponsiveAppBar = () => {
                 </IconButton>
               </>
             ) : (
-              <Link to="/login">Login</Link>
+              <Button
+                size="small"
+                sx={{
+                  color: "white",
+                  backgroundColor: "primary.main",
+                  width: "80%",
+                  height: "20%",
+                  "&:hover": {
+                    color: "white",
+                    backgroundColor: "primary.main",
+                    filter: "brightness(70%)",
+                  },
+                }}
+              >
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                  }}
+                  to="/login"
+                >
+                  Login
+                </Link>
+              </Button>
             )}
 
             <Menu
